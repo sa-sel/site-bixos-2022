@@ -10,11 +10,11 @@ import { SocialMediaService } from '@services'
 export class FooterComponent implements OnInit {
   socialMedia: SocialMediaModel[] = [
     { name: SocialMedia.Email, url: 'sasel@eesc.usp.br' },
-    { name: SocialMedia.Facebook, url: 'facebook.com' },
+    { name: SocialMedia.Facebook, url: 'https://www.facebook.com/sasel.usp' },
     { name: SocialMedia.GitHub, url: 'https://github.com/sa-sel' },
-    { name: SocialMedia.Instagram, url: '@saselusp' },
-    { name: SocialMedia.WhatsApp, url: '+55 (99) 99999-9999' },
-    { name: SocialMedia.YouTube, url: 'youtube.com' },
+    { name: SocialMedia.Instagram, url: 'https://www.instagram.com/saselusp/' },
+    { name: SocialMedia.WhatsApp, url: '+55 (71) 8155-6248' },
+    { name: SocialMedia.YouTube, url: 'https://www.youtube.com/channel/UCCIw2l3rNCepuZsugA4BC7w' },
   ]
 
   constructor(private socialMediaService: SocialMediaService) {}
