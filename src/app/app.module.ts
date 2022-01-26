@@ -8,12 +8,14 @@ import {
   LogoComponent,
   SocialMediaIconComponent,
   TitleComponent,
+  ModalComponent,
+  SidebarComponent,
 } from '@shared'
 import { ModalModule } from 'ngx-bootstrap/modal'
 import { TooltipModule } from 'ngx-bootstrap/tooltip'
+import { CollapseModule } from 'ngx-bootstrap/collapse'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { ModalComponent } from './shared/modal/modal.component'
 
 @NgModule({
   declarations: [
@@ -27,10 +29,12 @@ import { ModalComponent } from './shared/modal/modal.component'
     SanitizeHtmlPipe,
     SocialMediaIconComponent,
     TitleComponent,
+    SidebarComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
+    CollapseModule.forRoot(),
     ModalModule.forRoot(),
     TooltipModule.forRoot(),
   ],
