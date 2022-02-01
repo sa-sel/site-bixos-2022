@@ -1,6 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { ImageModel } from '@models';
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-banner-router',
@@ -9,13 +11,13 @@ import { ImageModel } from '@models';
 })
 export class BannerRouterComponent implements OnInit,OnDestroy {
 
-  sub:any
+  sub !: Subscription
 
   image1: ImageModel = {
     src: '../../../assets/images/banner.jpg',
     alt: 'uma foto da comissao',
   }
-  
+
   image2: ImageModel = {
     src: 'https://pixy.org/src2/600/6007103.jpg',
     alt: 'imagem teste',
@@ -26,12 +28,12 @@ export class BannerRouterComponent implements OnInit,OnDestroy {
     alt: 'uma logo qualquer',
   }
 
-  constructor(private router: Router,private activatedRoute: ActivatedRoute) { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
-    this.sub=this.activatedRoute.url.subscribe(parameter => {
-      console.log(parameter)
-    })
+    this.sub=this.route.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event:any) => {
+     console.log(event.url);
+   });
   }
   ngOnDestroy(): void{
     this.sub.unsubscribe()
