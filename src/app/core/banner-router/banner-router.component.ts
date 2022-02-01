@@ -1,17 +1,17 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { ImageModel } from '@models';
-import { Subscription } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { Component, OnDestroy, OnInit } from '@angular/core'
+import { NavigationEnd, Router } from '@angular/router'
+import { ImageModel } from '@models'
+import { Subscription } from 'rxjs'
+import { filter } from 'rxjs/operators'
 
 @Component({
   selector: 'app-banner-router',
   templateUrl: './banner-router.component.html',
-  styleUrls: ['./banner-router.component.scss']
+  styleUrls: ['./banner-router.component.scss'],
 })
-export class BannerRouterComponent implements OnInit,OnDestroy {
-
-  sub !: Subscription
+export class BannerRouterComponent implements OnInit, OnDestroy {
+  sub!: Subscription
+  currentImage: ImageModel = { src: '', alt: '' }
 
   image1: ImageModel = {
     src: '../../../assets/images/banner.jpg',
@@ -28,15 +28,21 @@ export class BannerRouterComponent implements OnInit,OnDestroy {
     alt: 'uma logo qualquer',
   }
 
-  constructor(private route: Router) { }
+  constructor(private route: Router) {}
 
   ngOnInit(): void {
-    this.sub=this.route.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event:any) => {
-     console.log(event.url);
-   });
+    this.sub = this.route.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        if (event.url === '/a') {
+          this.currentImage = this.image1
+        }
+        if (event.url === '/') {
+          this.currentImage = this.image2
+        }
+      })
   }
-  ngOnDestroy(): void{
+  ngOnDestroy(): void {
     this.sub.unsubscribe()
   }
-
 }
