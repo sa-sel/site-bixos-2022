@@ -1,24 +1,21 @@
 <app-title>Titulo</app-title>
 <app-title [subtitle]="true">Subtitulo</app-title>
 
+<app-image-grid [gridItems]="[image1, image2, image3]"></app-image-grid>
+<app-title>{{ openModal }}</app-title>
+<button (click)="toggleModal()">testeste</button>
 <app-alternating-layout [contents]="textAndImageList"> </app-alternating-layout>
 
-<h2 class="mb-5">oi</h2>
 <h2>oi</h2>
 <h2>oi</h2>
 <h2>oi</h2>
 <h2>oi</h2>
-<h2>oi</h2>
-<h2>oi</h2>
-
-<button (click)="toggleModal()">testeste</button>
-<app-title>{{ openModal }}</app-title>
 
 <app-modal
   [(isOpen)]="openModal"
   title="Esse é um modal"
   [text]="'Oi! teste'"
-  [image]="{ src: '../../assets/images/logo/logo.png', alt: 'test' }"
+  [image]="{ src: '../../assets/images/logo/logo.png', alt: 'test', caption: 'Teste' }"
   url="https://google.com"
 >
   <div class="text-justify">

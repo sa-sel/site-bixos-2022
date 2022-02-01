@@ -74,6 +74,13 @@ a:active {
   color: $secondary !important;
 }
 
+figcaption {
+  @extend .text-muted;
+  @extend .small;
+  font-style: italic;
+  text-align: center;
+}
+
 .overflow-hidden {
   overflow: hidden hidden;
 }
