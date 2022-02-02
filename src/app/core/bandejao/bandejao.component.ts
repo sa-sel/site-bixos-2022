@@ -1,3 +1,4 @@
+import { AlternatingLayoutModel } from './../../models/alternating-layout.model'
 import { Component } from '@angular/core'
 
 @Component({
@@ -5,7 +6,7 @@ import { Component } from '@angular/core'
   templateUrl: './bandejao.component.html',
 })
 export class BandejaoComponent {
-  textAndImageList = [
+  textAndImageList: AlternatingLayoutModel[] = [
     {
       image: {
         alt: 'bandeja com comida',
