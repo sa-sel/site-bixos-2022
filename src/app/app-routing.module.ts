@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { HomeComponent } from '@core'
+import { MoradiasComponent } from 'core/moradias/moradias.component'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'moradias', component: MoradiasComponent},
   // { path: 'kit-bixo', component: KitBixoComponent },
   // { path: 'projeto-ampere', component: ProjetoAmpereComponent },
   // { path: 'ic-extras', component: IcExtrasComponent },
