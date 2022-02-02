@@ -1,9 +1,11 @@
+import { SobreCursoComponent } from './core/sobre-curso/sobre-curso.component'
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { HomeComponent } from '@core'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'sobre-o-curso', component: SobreCursoComponent },
   // { path: 'kit-bixo', component: KitBixoComponent },
   // { path: 'projeto-ampere', component: ProjetoAmpereComponent },
   // { path: 'ic-extras', component: IcExtrasComponent },
