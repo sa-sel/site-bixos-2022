@@ -1,17 +1,18 @@
 import { Component } from '@angular/core'
+import { AlternatingLayoutModel } from '@models'
 
 @Component({
   selector: 'app-bibliotecas',
   templateUrl: './bibliotecas.component.html',
 })
 export class BibliotecasComponent {
-  introduction = [
+  introduction: AlternatingLayoutModel[] = [
     {
       text: '<br><br>Como aluna(o) da USP, você tem direito de acessar livremente qualquer biblioteca independentemente do campus. Cada um dos 5 institutos no campus de São Carlos tem sua própria biblioteca (além de uma presente no campus 2). E devido aos amplos acervos, os materiais recomendados pelos professores geralmente possuem alta disponibilidade (<strike>exceto em semana de prova</strike>), assim, você não precisa se preocupar em comprar livros ou apostilas.',
     },
   ]
 
-  textAndImageList = [
+  textAndImageList: AlternatingLayoutModel[] = [
     {
       image: {
         alt: 'acervo de exemplares icmc',
