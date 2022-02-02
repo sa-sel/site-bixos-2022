@@ -16,7 +16,8 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { HomeComponent } from './core/home/home.component'
 import { ModalComponent } from './shared/modal/modal.component'
-import { CarouselModule } from 'ngx-bootstrap/carousel'
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel'
     SocialMediaIconComponent,
     TitleComponent,
     HomeComponent,
+    BibliotecasComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -1,9 +1,11 @@
+import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { HomeComponent } from '@core'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'bibliotecas', component: BibliotecasComponent },
   // { path: 'kit-bixo', component: KitBixoComponent },
   // { path: 'projeto-ampere', component: ProjetoAmpereComponent },
   // { path: 'ic-extras', component: IcExtrasComponent },
