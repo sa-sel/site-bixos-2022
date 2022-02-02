@@ -1,11 +1,12 @@
 import { Component } from '@angular/core'
+import { AlternatingLayoutModel } from '@models'
 
 @Component({
   selector: 'app-sobre-curso',
   templateUrl: './sobre-curso.component.html',
 })
 export class SobreCursoComponent {
-  textAndImageList = [
+  textAndImageList: AlternatingLayoutModel[] = [
     {
       text: 'Sim! Nós também vamos falar um pouco sobre a graduação. Afinal de contas é uma parte importante da universidade.',
     },
