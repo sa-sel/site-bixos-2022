@@ -10,7 +10,8 @@
 
     <!--Only text-->
     <div *ngIf="!item.image && item.text">
-      <p [innerHTML]="item.text | sanitizeHtml"></p>
+      <app-title *ngIf="item.subtitle" [subtitle]="true">{{ item.text }}</app-title>
+      <p *ngIf="!item.subtitle" [innerHTML]="item.text | sanitizeHtml"></p>
     </div>
 
     <!--Image and text-->
