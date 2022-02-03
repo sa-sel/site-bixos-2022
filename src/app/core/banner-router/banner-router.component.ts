@@ -11,6 +11,7 @@ import { filter } from 'rxjs/operators'
 export class BannerRouterComponent implements OnInit, OnDestroy {
   subscription!: Subscription
   currentImages: ImageModel[] = []
+  currentLogo: ImageModel = {alt: "", src: ""}
 
   image1: ImageModel = {
     src: '../../../assets/images/banner.jpg',
@@ -35,10 +36,12 @@ export class BannerRouterComponent implements OnInit, OnDestroy {
       .subscribe((event: any) => {
         if (event.url === '/a') {
           this.currentImages=[]
+          this.currentLogo=this.image3
           this.currentImages.push(this.image1)
         }
         if (event.url === '/') {
           this.currentImages=[]
+          this.currentLogo=this.image3
           this.currentImages.push(this.image2)
         }
       })
