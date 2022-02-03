@@ -10,7 +10,7 @@ import { filter } from 'rxjs/operators'
 })
 export class BannerRouterComponent implements OnInit, OnDestroy {
   subscription!: Subscription
-  currentImage: ImageModel = { src: '', alt: '' }
+  currentImages: ImageModel[] = []
 
   image1: ImageModel = {
     src: '../../../assets/images/banner.jpg',
@@ -34,10 +34,12 @@ export class BannerRouterComponent implements OnInit, OnDestroy {
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: any) => {
         if (event.url === '/a') {
-          this.currentImage = this.image1
+          this.currentImages=[]
+          this.currentImages.push(this.image1)
         }
         if (event.url === '/') {
-          this.currentImage = this.image2
+          this.currentImages=[]
+          this.currentImages.push(this.image2)
         }
       })
   }
