@@ -15,7 +15,7 @@ export class SobreCursoComponent {
     },
     {
       image: {
-        alt: 'bloco d',
+        alt: 'Bloco D, prédio onde ocorrem diversas aulas da Elétrica',
         src: 'assets/images/sobre-curso/bloco-d.jpg',
         caption: 'Bloco D, prédio onde ocorrem diversas aulas da Elétrica',
       },
@@ -26,7 +26,7 @@ export class SobreCursoComponent {
     },
     {
       image: {
-        alt: 'bancada laboratorio',
+        alt: 'Bancada no laboratório de medidas e circuitos',
         src: 'assets/images/sobre-curso/laboratorio.png',
         caption: 'Bancada no laboratório de medidas e circuitos',
       },
@@ -37,7 +37,7 @@ export class SobreCursoComponent {
     },
     {
       image: {
-        alt: 'aula de física',
+        alt: 'Uma aula de Física',
         src: 'assets/images/sobre-curso/fisica.png',
         caption: 'Uma aula de Física',
       },
