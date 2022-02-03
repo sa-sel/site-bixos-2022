@@ -62,7 +62,7 @@ body,
 a,
 a:link,
 a:visited {
-  color: inherit;
+  color: $blue;
 }
 
 a:hover {
@@ -71,7 +71,7 @@ a:hover {
 }
 
 a:active {
-  color: $secondary !important;
+  color: $dark-blue !important;
 }
 
 figcaption {
