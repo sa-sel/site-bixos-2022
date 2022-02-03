@@ -1,8 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
-import { NavigationEnd, Router } from '@angular/router'
+import { Router, RoutesRecognized } from '@angular/router'
 import { ImageModel } from '@models'
 import { Subscription } from 'rxjs'
-import { filter } from 'rxjs/operators'
 
 @Component({
   selector: 'app-banner-router',
@@ -10,41 +9,18 @@ import { filter } from 'rxjs/operators'
 })
 export class BannerRouterComponent implements OnInit, OnDestroy {
   subscription!: Subscription
-  currentImages: ImageModel[] = []
-  currentLogo: ImageModel = {alt: "", src: ""}
+  currentImages!: ImageModel[]
+  currentLogo?: ImageModel
 
-  image1: ImageModel = {
-    src: '../../../assets/images/banner.jpg',
-    alt: 'uma foto da comissao',
-  }
-
-  image2: ImageModel = {
-    src: 'https://pixy.org/src2/600/6007103.jpg',
-    alt: 'imagem teste',
-  }
-
-  image3: ImageModel = {
-    src: 'https://freepikpsd.com/file/2019/10/generic-company-logo-png-7-Transparent-Images.png',
-    alt: 'uma logo qualquer',
-  }
-
-  constructor(private route: Router) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.subscription = this.route.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe((event: any) => {
-        if (event.url === '/a') {
-          this.currentImages=[]
-          this.currentLogo=this.image3
-          this.currentImages.push(this.image1)
-        }
-        if (event.url === '/') {
-          this.currentImages=[]
-          this.currentLogo=this.image3
-          this.currentImages.push(this.image2)
-        }
-      })
+    this.subscription = this.router.events.subscribe(data => {
+      if (data instanceof RoutesRecognized) {
+        this.currentImages = data.state.root.firstChild?.data['background']
+        this.currentLogo = data.state.root.firstChild?.data['logo']
+      }
+    })
   }
 
   ngOnDestroy(): void {

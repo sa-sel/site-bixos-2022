@@ -1,15 +1,22 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { HomeComponent } from '@core'
-import { TitleComponent } from '@shared'
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'a', component: TitleComponent },
-  // { path: 'kit-bixo', component: KitBixoComponent },
-  // { path: 'projeto-ampere', component: ProjetoAmpereComponent },
-  // { path: 'ic-extras', component: IcExtrasComponent },
-  // ...
+  {
+    path: '',
+    component: HomeComponent,
+    data: {
+      background: [
+        { src: '../../../assets/images/banner.jpg', alt: 'uma foto da comissao' },
+        { src: 'https://pixy.org/src2/600/6007103.jpg', alt: 'imagem teste' },
+      ],
+      logo: {
+        src: 'https://freepikpsd.com/file/2019/10/generic-company-logo-png-7-Transparent-Images.png',
+        alt: 'uma logo qualquer',
+      },
+    },
+  },
   { path: '**', redirectTo: '/' },
 ]
 
