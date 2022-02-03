@@ -20,7 +20,10 @@
           [alt]="item.image.alt"
           class="w-100 cursor-pointer"
         />
-        <figcaption>{{ item.image.caption }}</figcaption>
+        <figcaption
+          *ngIf="item.image.caption"
+          [innerHTML]="item.image.caption | sanitizeHtml"
+        ></figcaption>
       </figure>
     </ng-template>
   </div>
