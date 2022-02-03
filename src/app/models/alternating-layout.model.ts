@@ -4,4 +4,5 @@ export interface AlternatingLayoutModel {
   image?: ImageModel
   text?: string
   imageOnLeft?: boolean
+  subtitle?: boolean
 }
