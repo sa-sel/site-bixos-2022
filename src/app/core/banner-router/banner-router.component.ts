@@ -7,10 +7,9 @@ import { filter } from 'rxjs/operators'
 @Component({
   selector: 'app-banner-router',
   templateUrl: './banner-router.component.html',
-  styleUrls: ['./banner-router.component.scss'],
 })
 export class BannerRouterComponent implements OnInit, OnDestroy {
-  sub!: Subscription
+  subscription!: Subscription
   currentImage: ImageModel = { src: '', alt: '' }
 
   image1: ImageModel = {
@@ -31,7 +30,7 @@ export class BannerRouterComponent implements OnInit, OnDestroy {
   constructor(private route: Router) {}
 
   ngOnInit(): void {
-    this.sub = this.route.events
+    this.subscription = this.route.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: any) => {
         if (event.url === '/a') {
@@ -42,7 +41,8 @@ export class BannerRouterComponent implements OnInit, OnDestroy {
         }
       })
   }
+
   ngOnDestroy(): void {
-    this.sub.unsubscribe()
+    this.subscription.unsubscribe()
   }
 }
