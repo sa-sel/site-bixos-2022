@@ -23,7 +23,7 @@ export class AppComponent {
   }
 
   image3: ImageModel = {
-    src: 'https://freepikpsd.com/file/2019/10/generic-company-logo-png-7-Transparent-Images.png',
+    src: '/assets/images/logo/subtitle.svg',
     alt: 'uma logo qualquer',
   }
 }

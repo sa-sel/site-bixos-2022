@@ -3,11 +3,11 @@
     <section
       class="d-flex flex-column flex-md-row justify-content-around align-items-center w-100 px-3 mb-3 gap-3"
     >
-      <app-logo class="w-50 w-sm-30 w-md-25 w-lg-20 w-xl-15" [subtitle]="true"></app-logo>
+      <app-logo class="w-90 w-md-50 w-lg-30" [subtitle]="true"></app-logo>
 
       <div
         *ngIf="socialMedia.length"
-        class="row justify-content-center align-items-center gap-3 w-70 w-md-35 w-lg-35"
+        class="row justify-content-center align-items-center gap-3 w-70 w-md-35 w-lg-40"
       >
         <div class="w-auto" *ngFor="let network of socialMedia">
           <app-social-media-icon
