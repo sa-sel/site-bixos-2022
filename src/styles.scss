@@ -56,7 +56,7 @@ body,
   background-color: $light;
   font-family: 'Ubuntu', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
     'Roboto', 'Oxygen';
-  height: 100vh;
+  height: 100%;
 }
 
 a,
@@ -90,16 +90,6 @@ figcaption {
   width: 1px;
   height: 100%;
   border-left: 1px solid $gray-500;
-}
-
-.no-select {
-  -webkit-touch-callout: none !important; /* iOS Safari */
-  -webkit-user-select: none !important; /* Safari */
-  -khtml-user-select: none !important; /* Konqueror HTML */
-  -moz-user-select: none !important; /* Old versions of Firefox */
-  -ms-user-select: none !important; /* Internet Explorer/Edge */
-  user-select: none !important; /* Non-prefixed version, currently
-    supported by Chrome, Edge, Opera and Firefox */
 }
 
 .text-justify {

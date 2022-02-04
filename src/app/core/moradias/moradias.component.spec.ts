@@ -1,25 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { MoradiasComponent } from './moradias.component';
+import { MoradiasComponent } from './moradias.component'
 
 describe('MoradiasComponent', () => {
-  let component: MoradiasComponent;
-  let fixture: ComponentFixture<MoradiasComponent>;
+  let component: MoradiasComponent
+  let fixture: ComponentFixture<MoradiasComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MoradiasComponent ]
-    })
-    .compileComponents();
-  });
+      declarations: [MoradiasComponent],
+    }).compileComponents()
+  })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MoradiasComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(MoradiasComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
