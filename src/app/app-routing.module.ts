@@ -5,7 +5,6 @@ import { MoradiasComponent } from 'core/moradias/moradias.component'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
 
-
 const routes: Routes = [
   {
     path: '',
