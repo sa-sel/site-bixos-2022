@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core'
 import { Router } from '@angular/router'
+import { SidebarComponent } from '@core'
 
 @Component({
   selector: 'app-navbar',
@@ -32,6 +33,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   // TODO
   openSidebar(): void {
+    // SidebarComponent.??
     console.log('open sidebar')
   }
 
