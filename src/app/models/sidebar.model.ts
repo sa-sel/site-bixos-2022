@@ -1,8 +1,11 @@
-export interface SidebarModel {
+export interface SidebarItemModel {
   title: string
-  href: string
-  subtopcs: {
+  link: {
+    url: string
+    fragment?: string
+  }
+  subitems?: {
     title: string
-    href: string
+    url: string
   }[]
 }

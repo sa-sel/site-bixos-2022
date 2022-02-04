@@ -1,32 +1,37 @@
-<ng-template #sidebar>
-  <div class="sidebar-header">
-    <!-- <h4 class="sidebar-title pull-left"> {{ sidebarItems.title }} </h4> -->
-    <h5>This is the sidebar header!</h5>
-    <button
-      type="button"
-      class="navbar-toggle collapsed pull-right"
-      data-toggle="collapse"
-      [attr.aria-expanded]="!isSidebarCollapsed"
-      aria-label="Close"
-      (click)="toggleCollapse()"
-      [ngClass]="{ collapsed: isSidebarCollapsed }"
-    >
-      <span aria-hidden="true" class="visually-hidden">&times;</span>
-    </button>
+<aside
+  class="offcanvas offcanvas-start"
+  [class.show]="isOpen"
+  id="sidebar"
+  aria-labelledby="sidebarLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="sidebarLabel">Menu de Navegação</h5>
+    <button type="button" class="btn-close text-reset" (click)="sidebar.hide()"></button>
   </div>
 
-  <div class="sidebar-body" [ngClass]="{ in: !isSidebarCollapsed }">
-    <h5>This is the sidebar body!</h5>
-    <!-- <div class="" *ngFor="let item of sidebarItems">
-            <a [href]="sidebarItems.href"> 
-                <div>
-                    $(sidebarItems.title)
-                </div>
-            </a>
-        </div> -->
+  <div class="offcanvas-body">
+    <div>
+      Some text as placeholder. In real life you can have the elements you have chosen.
+      Like, text, images, lists, etc.
+    </div>
+    <div class="dropdown mt-3">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
   </div>
 
-  <div class="sidebar-footer">
-    <h5>This is the sidebar footer!</h5>
+  <div class="offcanvas-footer">
+    <span>GRUPOS DOS BIXOS</span>
   </div>
-</ng-template>
+</aside>

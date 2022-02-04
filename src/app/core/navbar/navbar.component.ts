@@ -1,6 +1,5 @@
 import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core'
 import { Router } from '@angular/router'
-import { SidebarComponent } from '@core'
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +10,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   @Input() isBelowBanner = true
 
   @ViewChild('navbar') navbarRef!: ElementRef
+
+  isSidebarOpen = false
 
   constructor(private router: Router) {}
 
@@ -31,10 +32,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.unsetSticky()
   }
 
-  // TODO
-  openSidebar(): void {
-    // SidebarComponent.??
-    console.log('open sidebar')
+  openSidebar() {
+    this.isSidebarOpen = true
   }
 
   goToHomepage(): void {
