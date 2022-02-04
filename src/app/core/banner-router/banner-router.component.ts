@@ -15,10 +15,13 @@ export class BannerRouterComponent implements OnInit, OnDestroy {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.subscription = this.router.events.subscribe(data => {
-      if (data instanceof RoutesRecognized) {
-        this.currentImages = data.state.root.firstChild?.data['background']
-        this.currentLogo = data.state.root.firstChild?.data['logo']
+    this.subscription = this.router.events.subscribe(route => {
+      if (route instanceof RoutesRecognized) {
+        const data = route.state.root.firstChild?.data ?? {}
+        /* eslint-disable dot-notation */
+        this.currentImages = data['background']
+        this.currentLogo = data['logo']
+        /* eslint-enable dot-notation */
       }
     })
   }

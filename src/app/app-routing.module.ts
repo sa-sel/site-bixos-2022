@@ -8,7 +8,7 @@ const routes: Routes = [
     component: HomeComponent,
     data: {
       background: [
-        { src: '../../../assets/images/banner.jpg', alt: 'uma foto da comissao' },
+        { src: '/assets/images/banner.jpg', alt: 'uma foto da comissao' },
         { src: 'https://pixy.org/src2/600/6007103.jpg', alt: 'imagem teste' },
       ],
       logo: {
