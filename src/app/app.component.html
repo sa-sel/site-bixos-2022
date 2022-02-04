@@ -1,8 +1,9 @@
-<app-banner [background]="[image1, image2]" [logo]="image3"></app-banner>
+<app-banner-router></app-banner-router>
 <app-navbar></app-navbar>
 
 <main
-  class="container"
+  class="container pb-5"
+  [ngStyle]="{ paddingTop: '16px', maxWidth: '70%' }"
   style="min-height: calc(100vh + 20px - {{ footerElement.offsetHeight }}px)"
 >
   <router-outlet></router-outlet>

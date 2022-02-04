@@ -18,34 +18,6 @@ export class MoradiasComponent {
     {
       text: '<h3>Alojamento Estudantil no Campus</h3><br><br> Há no Campus cinco blocos de alojamentos, totalizando 252 vagas. Para garantir uma dessas vagas, é necessário passar por uma seleção dos interessados feita por uma comissão, em que o critério a se avaliar é a situação socioeconômica do aluno de graduação. Vale ressaltar que se você escolher o alojamento como moradia, então você não poderá receber o Auxílio Financeiro disponibilizado pela PAPFE (Programa de Apoio à Permanência e Formação Estudantil) e vice-versa, poderá apenas utilizar os outros auxílios disponíveis, como alimentação e transporte. Para mais informações sobre a PAPFE, clique <a href="https://sites.usp.br/sas/papfe/":>aqui</a>.',
     },
-    {
-      image: {
-        src: '/assets/images/moradias/aloja1.png',
-        alt: 'foto do alojamento',
-        caption: 'Bloco do alojamento da USP',
-      },
-    },
-    {
-      image: {
-        src: '/assets/images/moradias/aloja2.png',
-        alt: 'foto do alojamento',
-        caption: 'Bloco do alojamento da USP',
-      },
-    },
-    {
-      image: {
-        src: '/assets/images/moradias/aloja3.png',
-        alt: 'foto do alojamento',
-        caption: 'Bloco do alojamento da USP',
-      },
-    },
-    {
-      image: {
-        src: '/assets/images/moradias/aloja4.png',
-        alt: 'foto do alojamento',
-        caption: 'Bloco do alojamento da USP',
-      },
-    },
   ]
   image1 = {
     image: {
@@ -57,22 +29,22 @@ export class MoradiasComponent {
   image2 = {
     image: {
       src: '/assets/images/moradias/aloja2.png',
-      alt: 'foto do alojamento',
-      caption: 'Bloco do alojamento da USP',
+      alt: 'bloco e',
+      caption: 'Bloco E',
     },
   }
   image3 = {
     image: {
       src: '/assets/images/moradias/aloja3.png',
-      alt: 'foto do alojamento',
-      caption: 'Bloco do alojamento da USP',
+      alt: 'aloja à noite',
+      caption: 'Aloja à noite',
     },
   }
   image4 = {
     image: {
       src: '/assets/images/moradias/aloja4.png',
-      alt: 'foto do alojamento',
-      caption: 'Bloco do alojamento da USP',
+      alt: 'arvore',
+      caption: 'Árvore do aloja',
     },
   }
   textAndImageList2: AlternatingLayoutModel[] = [
