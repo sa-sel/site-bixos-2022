@@ -1,7 +1,5 @@
 <app-title>Serviços Acadêmicos</app-title>
 
-<app-image-grid [gridItems]="benefitsList"></app-image-grid>
-
 <section>
   <p>
     Para você não ficar perdido no novo mundo de plataformas e serviços da universidade, e
@@ -11,20 +9,23 @@
 </section>
 
 <section>
-  <app-title [subtitle]="true">Portal de Serviços USP</app-title>
+  <app-title [subtitle]="true"
+    ><a href="https://portalservicos.usp.br/ " target="_blank" rel="noopener noreferrer"
+      >Portal de Serviços USP</a
+    ></app-title
+  >
   <p>
     Desde matrícula até adicionar crédito na conta do bandejão (restaurante universitário)
     você pode fazer nesse site que reune a maioria dos serviços oferecidos pela
     universidade.
   </p>
-  <a href="https://portalservicos.usp.br/ " target="_blank" rel="noopener noreferrer"
-    >Link do Portal de Serviços - Melhorar</a
-  >
+
   <img
     src="/assets/images/servicos-academicos/portal.png"
     alt="Tela inicial do Portal de Serviços da USP"
     class="img-fluid d-block mx-auto my-2"
   />
+  
   <h5>Calendário</h5>
   <ul>
     <li>
@@ -129,15 +130,16 @@
 </section>
 
 <section>
-  <app-title [subtitle]="true">e-Disciplinas (Moodle)</app-title>
+  <app-title [subtitle]="true"
+    ><a href="https://edisciplinas.usp.br/" target="_blank" rel="noopener noreferrer"
+      >e-Disciplinas (Moodle)</a
+    ></app-title
+  >
   <p>
     Links das aulas e avisos, arquivos e materiais, exercícios e provas. Esse é o ambiente
     que a maioria dos professores usa para interagir com os alunos.
   </p>
 
-  <a href="https://edisciplinas.usp.br/" target="_blank" rel="noopener noreferrer"
-    >EDISCIPLINAS - Melhorar</a
-  >
   <img
     src="../../../assets/images/servicos-academicos/moodle.png"
     alt="Página inicial do edisciplinas"
@@ -219,17 +221,17 @@
 </section>
 
 <section>
-  <app-title [subtitle]="true">MatrUSP</app-title>
+  <app-title [subtitle]="true"
+    ><a href="https://bcc.ime.usp.br/matrusp/" target="_blank" rel="noopener noreferrer"
+      >MatrUSP</a
+    ></app-title
+  >
   <p>
     Ferramenta que permite você montar um esboço da sua grade horária. Você pode adicionar
     todas as disciplinas que gostaria de cursar, e o sistema vai automaticamente encontrar
     e te mostrar todas as combinações de horários possíveis. (Você só vai precisar usar
-    isso quando for fazer matrícula nas disciplinas do 2º semestre e adiante)
+    isso quando for fazer matrícula nas disciplinas do 2º semestre e adiante).
   </p>
-
-  <a href="https://bcc.ime.usp.br/matrusp/" target="_blank" rel="noopener noreferrer"
-    >MatrUSP pro BCC</a
-  >
   <img
     src="/assets/images/servicos-academicos/matrusp.png"
     alt="Exemplo de como o matrUSP é utlizado"
@@ -258,3 +260,5 @@
     são devido a convênio com a universidade, outros são benefícios para universitários.
   </p>
 </section>
+
+<app-image-grid [gridItems]="benefitsList"></app-image-grid>

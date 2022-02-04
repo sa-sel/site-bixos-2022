@@ -5,7 +5,6 @@ import { ModalComponent } from '@shared'
 @Component({
   selector: 'app-servicos-academicos',
   templateUrl: './servicos-academicos.component.html',
-  styleUrls: ['./servicos-academicos.component.scss'],
 })
 export class ServicosAcademicosComponent {
   openModal = false
