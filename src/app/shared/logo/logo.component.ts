@@ -1,11 +1,20 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-logo',
   templateUrl: './logo.component.html',
 })
-export class LogoComponent {
+export class LogoComponent implements OnInit {
   @Input() subtitle = false
+  @Input() minimal = false
 
-  path = '../../assets/images/logo/logo.png'
+  path = '/assets/images/logo/main.svg'
+
+  ngOnInit(): void {
+    if (this.subtitle) {
+      this.path = this.path.replace('main', 'subtitle')
+    } else if (this.minimal) {
+      this.path = this.path.replace('main', 'minimal')
+    }
+  }
 }

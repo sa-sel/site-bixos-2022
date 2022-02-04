@@ -18,6 +18,8 @@ import { HomeComponent } from './core/home/home.component'
 import { ModalComponent } from './shared/modal/modal.component'
 import { CarouselModule } from 'ngx-bootstrap/carousel'
 import { BannerRouterComponent } from './core/banner-router/banner-router.component'
+import { MatriculaComponent } from './core/matricula/matricula.component'
+import { BandejaoComponent } from './core/bandejao/bandejao.component'
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { BannerRouterComponent } from './core/banner-router/banner-router.compon
     TitleComponent,
     HomeComponent,
     BannerRouterComponent,
+    MatriculaComponent,
+    BandejaoComponent,
   ],
   imports: [
     AppRoutingModule,

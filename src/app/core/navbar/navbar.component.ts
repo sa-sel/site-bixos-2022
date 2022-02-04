@@ -46,7 +46,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     // eslint-disable-next-line
     const main = document.querySelector('main') || document.querySelector('.main')
     if (main) {
-      main.style.paddingTop = `${navbar.offsetHeight + 20}px`
+      main.style.paddingTop = `${navbar.offsetHeight + 16}px`
     }
   }
 
@@ -57,7 +57,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     // eslint-disable-next-line
     const main = document.querySelector('main') || document.querySelector('.main')
     if (main) {
-      main.style.paddingTop = '0'
+      main.style.paddingTop = '16px'
     }
   }
 }
