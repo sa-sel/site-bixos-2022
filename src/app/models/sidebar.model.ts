@@ -1,11 +1,14 @@
+interface LinkModel {
+  url: string
+  fragment?: string
+}
+
 export interface SidebarItemModel {
   title: string
-  link: {
-    url: string
-    fragment?: string
-  }
+  icon: string
+  link: LinkModel
   subitems?: {
     title: string
-    url: string
+    link: LinkModel
   }[]
 }

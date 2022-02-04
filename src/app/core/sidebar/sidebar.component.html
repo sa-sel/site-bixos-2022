@@ -1,5 +1,5 @@
 <aside
-  class="offcanvas offcanvas-start"
+  class="offcanvas offcanvas-start bg-primary text-light"
   [class.show]="isOpen"
   id="sidebar"
   aria-labelledby="sidebarLabel"
@@ -10,25 +10,20 @@
   </div>
 
   <div class="offcanvas-body">
-    <div>
-      Some text as placeholder. In real life you can have the elements you have chosen.
-      Like, text, images, lists, etc.
-    </div>
-    <div class="dropdown mt-3">
-      <button
-        class="btn btn-secondary dropdown-toggle"
-        type="button"
-        id="dropdownMenuButton"
-        data-bs-toggle="dropdown"
-      >
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div>
+    <ul class="list-unstyled d-flex flex-column gap-3">
+      <li *ngFor="let item of items" class="bg-primary">
+        <a
+          class="d-flex gap-1"
+          [routerLink]="item.link.url"
+          [fragment]="item.link.fragment"
+        >
+          <div class="bg-secondary text-center" style="width: 27px">
+            <i [class]="item.icon"></i>
+          </div>
+          {{ item.title.toUpperCase() }}
+        </a>
+      </li>
+    </ul>
   </div>
 
   <div class="offcanvas-footer">

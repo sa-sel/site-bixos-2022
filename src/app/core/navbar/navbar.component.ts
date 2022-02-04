@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   @ViewChild('navbar') navbarRef!: ElementRef
 
-  isSidebarOpen = false
+  isSidebarOpen = true
 
   constructor(private router: Router) {}
 

@@ -1,0 +1,11 @@
+@import '../../../colors';
+
+#sidebar li {
+  margin-bottom: solid 3px $black;
+}
+
+#sidebar a,
+a:link,
+a:visited {
+  color: inherit !important;
+}
