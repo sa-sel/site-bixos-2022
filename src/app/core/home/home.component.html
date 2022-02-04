@@ -1,0 +1,55 @@
+<app-title>Titulo</app-title>
+<app-title [subtitle]="true">Subtitulo</app-title>
+
+<app-image-grid [gridItems]="[image1, image2, image3]"></app-image-grid>
+<app-title>{{ openModal }}</app-title>
+<button (click)="toggleModal()">testeste</button>
+<app-alternating-layout [contents]="textAndImageList"> </app-alternating-layout>
+
+<h2>oi</h2>
+<h2>oi</h2>
+<h2>oi</h2>
+<h2>oi</h2>
+
+<app-modal
+  [(isOpen)]="openModal"
+  title="Esse é um modal"
+  [text]="'Oi! teste'"
+  [image]="{ src: '../../assets/images/logo/logo.png', alt: 'test', caption: 'Teste' }"
+  url="https://google.com"
+>
+  <div class="text-justify">
+    <br />
+    <app-title>Content Projection</app-title>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+    has been the industrys standard dummy text ever since the 1500s, when an unknown
+    printer took a galley of type and scrambled it to make a type specimen book.
+    <br /><br />
+    It has survived not only five centuries, but also the leap into electronic
+    typesetting, remaining essentially unchanged.
+    <br /><br />
+    It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+    Ipsum passages, and more recently with desktop publishing software like Aldus
+    PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the
+    printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy
+    text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+    it to make a type specimen book.
+    <br /><br />
+    It has survived not only five centuries, but also the leap into electronic
+    typesetting, remaining essentially unchanged.
+    <br /><br />
+    It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+    Ipsum passages, and more recently with desktop publishing software like Aldus
+    PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the
+    printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy
+    text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+    it to make a type specimen book.
+    <br /><br />
+    It has survived not only five centuries, but also the leap into electronic
+    typesetting, remaining essentially unchanged.
+    <br /><br />
+    It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+    Ipsum passages, and more recently with desktop publishing software like Aldus
+    PageMaker including versions of Lorem Ipsum
+  </div>
+</app-modal>

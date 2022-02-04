@@ -1,32 +1,32 @@
 <ng-template #sidebar>
-    <div class="sidebar-header">
-        <!-- <h4 class="sidebar-title pull-left"> {{ sidebarItems.title }} </h4> -->
-        <h5> This is the sidebar header! </h5>
-        <button
-          type="button"
-          class="navbar-toggle collapsed pull-right"
-          data-toggle="collapse"
-          [attr.aria-expanded]="!isSidebarCollapsed"
-          aria-label="Close"
-          (click)="toggleCollapse()"
-          [ngClass]="{'collapsed': isSidebarCollapsed}"
-        >
-          <span aria-hidden="true" class="visually-hidden">&times;</span>
-        </button>
-      </div>
-    
-      <div class="sidebar-body" [ngClass]="{'in': !isSidebarCollapsed}">
-        <h5> This is the sidebar body! </h5>
-        <!-- <div class="" *ngFor="let item of sidebarItems">
+  <div class="sidebar-header">
+    <!-- <h4 class="sidebar-title pull-left"> {{ sidebarItems.title }} </h4> -->
+    <h5>This is the sidebar header!</h5>
+    <button
+      type="button"
+      class="navbar-toggle collapsed pull-right"
+      data-toggle="collapse"
+      [attr.aria-expanded]="!isSidebarCollapsed"
+      aria-label="Close"
+      (click)="toggleCollapse()"
+      [ngClass]="{ collapsed: isSidebarCollapsed }"
+    >
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+
+  <div class="sidebar-body" [ngClass]="{ in: !isSidebarCollapsed }">
+    <h5>This is the sidebar body!</h5>
+    <!-- <div class="" *ngFor="let item of sidebarItems">
             <a [href]="sidebarItems.href"> 
                 <div>
                     $(sidebarItems.title)
                 </div>
             </a>
         </div> -->
-      </div>
+  </div>
 
-    <div class="sidebar-footer">
-        <h5> This is the sidebar footer! </h5>
-    </div>
+  <div class="sidebar-footer">
+    <h5>This is the sidebar footer!</h5>
+  </div>
 </ng-template>

@@ -21,8 +21,8 @@
     "paths": {
       "@services": ["services/index.ts"],
       "@models": ["models/index.ts"],
-      "@core": ["core/index.ts"],
       "@shared": ["shared/index.ts"],
+      "@core": ["core/index.ts"],
       "@pipes": ["pipes/index.ts"]
     }
   },

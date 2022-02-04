@@ -12,21 +12,24 @@
   </div>
 
   <div class="modal-body">
-    <a [href]="url" target="__blank" *ngIf="url; else coverOnly">
-      <img
-        [src]="image?.src"
-        [alt]="image?.alt"
-        class="w-100 mt-2 mb-5 image-responsive"
-      />
-    </a>
+    <!-- image + link -->
+    <figure class="mt-2 mb-4" *ngIf="url && image">
+      <a [href]="url" target="__blank">
+        <img [src]="image?.src" [alt]="image?.alt" class="w-100 image-responsive" />
+      </a>
+      <figcaption>{{ image?.caption }}</figcaption>
+    </figure>
 
-    <ng-template #coverOnly>
-      <img
-        [src]="image?.src"
-        [alt]="image?.alt"
-        class="w-100 mt-2 mb-4 image-responsive"
-      />
-    </ng-template>
+    <!-- link only -->
+    <div class="mt-2 mb-3" *ngIf="url && !image">
+      <a [href]="url" target="__blank" class="text-muted"> [link] </a>
+    </div>
+
+    <!-- image only -->
+    <figure class="mt-2 mb-4" *ngIf="!url && image">
+      <img [src]="image?.src" [alt]="image?.alt" class="w-100 image-responsive" />
+      <figcaption>{{ image?.caption }}</figcaption>
+    </figure>
 
     <div class="px-1 pb-2">
       <div *ngIf="paragraphs" class="text-justify">

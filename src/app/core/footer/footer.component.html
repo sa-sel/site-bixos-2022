@@ -1,24 +1,25 @@
-<footer class="bg-dark pt-4 pb-1 no-select">
+<footer class="bg-dark pt-4 pb-1 user-select-none">
   <div class="container">
     <section
-      class="d-flex flex-column flex-md-row justify-content-around align-items-center w-100 px-3 mb-3"
+      class="d-flex flex-column flex-md-row justify-content-around align-items-center w-100 px-3 mb-3 gap-3"
     >
-      <app-logo class="w-50 w-sm-30 w-md-25 w-lg-20 w-xl-15" [subtitle]="true"></app-logo>
+      <app-logo class="w-90 w-md-50 w-lg-30" [subtitle]="true"></app-logo>
 
       <div
         *ngIf="socialMedia.length"
-        class="social-media-panel d-flex justify-content-around align-items-center w-55 w-md-45 w-lg-35"
+        class="row justify-content-center align-items-center gap-3 w-70 w-md-35 w-lg-40"
       >
-        <app-social-media-icon
-          *ngFor="let network of socialMedia"
-          size="23pt"
-          [network]="network"
-          colorClass="text-primary"
-        ></app-social-media-icon>
+        <div class="w-auto" *ngFor="let network of socialMedia">
+          <app-social-media-icon
+            [network]="network"
+            size="23pt"
+            color="primary"
+          ></app-social-media-icon>
+        </div>
       </div>
     </section>
 
-    <section class="text-gray-500 text-center text-justify pt-3 px-5">
+    <section class="text-gray-500 text-center pt-3 px-5">
       <p>
         © 2022 SA-SEL. Todos os direitos reservados. <br class="d-md-none" />
         Desenvolvido por
@@ -48,7 +49,7 @@
           target="_blank"
           rel="noopener noreferrer"
           >Fernando Zanchetta</a
-          >,
+        >,
         <a
           href="https://github.com/lucasvianav/"
           target="_blank"

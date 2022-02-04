@@ -29,11 +29,10 @@ export class SidebarComponent implements OnChanges {
   @Output() isCollapsedChange = new EventEmitter<boolean>()
 
   ngOnChanges(changes: SimpleChanges): void {
-  // eslint-disable-next-line
+    // eslint-disable-next-line
     if (changes['isCollapsed'].currentValue) {
       this.isSidebarCollapsed = false
       this.isCollapsedChange.emit(this.isSidebarCollapsed)
     }
   }
-
 }

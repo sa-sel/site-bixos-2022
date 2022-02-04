@@ -7,5 +7,6 @@ import { ImageModel } from '@models'
   styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent {
-  @Input() image!: ImageModel
+  @Input() background!: ImageModel[]
+  @Input() logo?: ImageModel
 }

@@ -1,3 +1,4 @@
+export * from './alternating-layout/alternating-layout.component'
 export * from './banner/banner.component'
 export * from './logo/logo.component'
 export * from './modal/modal.component'

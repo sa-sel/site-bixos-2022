@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 
-import { ImageGridItemModel } from '@models'
+import { ImageGridItemModel, ModalModel } from '@models'
 
 @Component({
   selector: 'app-image-grid',
@@ -8,4 +8,17 @@ import { ImageGridItemModel } from '@models'
 })
 export class ImageGridComponent {
   @Input() gridItems!: ImageGridItemModel[]
+
+  openModal = false
+  modal: ModalModel = {
+    image: { src: '', alt: '' },
+    text: '',
+    url: '',
+    title: '',
+  }
+
+  createModal(modal: ModalModel) {
+    this.modal = modal
+    this.openModal = true
+  }
 }

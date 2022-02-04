@@ -44,12 +44,22 @@ export class NavbarComponent implements OnInit, OnDestroy {
   private setSticky() {
     const navbar = this.navbarRef?.nativeElement
     navbar.classList.add('fixed-top')
-    document.body.style.paddingTop = `${navbar.offsetHeight}px` // eslint-disable-line
+
+    // eslint-disable-next-line
+    const main = document.querySelector('main') || document.querySelector('.main')
+    if (main) {
+      main.style.paddingTop = `${navbar.offsetHeight + 16}px`
+    }
   }
 
   private unsetSticky() {
     const navbar = this.navbarRef?.nativeElement
     navbar.classList.remove('fixed-top')
-    document.body.style.paddingTop = '0' // eslint-disable-line
+
+    // eslint-disable-next-line
+    const main = document.querySelector('main') || document.querySelector('.main')
+    if (main) {
+      main.style.paddingTop = '16px'
+    }
   }
 }

@@ -1,3 +1,5 @@
+/* eslint-disable class-methods-use-this */
+
 import { Injectable } from '@angular/core'
 import { SocialMedia, SocialMediaIconMap, SocialMediaModel } from '@models'
 
@@ -5,18 +7,6 @@ import { SocialMedia, SocialMediaIconMap, SocialMediaModel } from '@models'
   providedIn: 'root',
 })
 export class SocialMediaService {
-  // Order is important
-  availableNetworks = [
-    SocialMedia.Facebook,
-    SocialMedia.Instagram,
-    SocialMedia.WhatsApp,
-    SocialMedia.Email,
-    SocialMedia.YouTube,
-    SocialMedia.GitHub,
-    SocialMedia.LinkedIn,
-    SocialMedia.Discord,
-  ]
-
   private getWhatsAppURL(phoneNumber: string, message: string): string {
     const apiURL = 'https://api.whatsapp.com/send?phone=$PHONE&text=$MESSAGE'
 
@@ -47,20 +37,11 @@ export class SocialMediaService {
     /* eslint-enable no-undef */
   }
 
-  formatSocialMedia(socialNetworks: SocialMediaModel[]): SocialMediaModel[] {
-    const index = (networkName: SocialMedia) =>
-      this.availableNetworks.indexOf(networkName)
-
-    return socialNetworks
-      .filter(network => network.url && this.availableNetworks.includes(network.name))
-      .map(
-        network =>
-          <SocialMediaModel>{
-            name: network.name,
-            url: this.getLink(network, 'Olá, SA-SEL! Tudo bem?'),
-            icon: SocialMediaIconMap[network.name],
-          }
-      )
-      .sort((a, b) => index(a.name) - index(b.name))
+  format(network: SocialMediaModel): SocialMediaModel {
+    return {
+      name: network.name,
+      url: this.getLink(network, 'Olá, SA-SEL! Tudo bem?'),
+      icon: SocialMediaIconMap[network.name],
+    }
   }
 }

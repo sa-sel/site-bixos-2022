@@ -1,7 +1,32 @@
-<div class="row p-5 justify-content-center">
+<div class="row p-5 justify-content-center align-items-center gap-3">
   <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-0" *ngFor="let item of gridItems">
-    <a [href]="item.url">
-      <img [src]="item.image.src" [alt]="item.image.alt" class="d-block m-auto w-100" />
-    </a>
+    <div *ngIf="!item.modal; else showModal">
+      <figure class="d-block m-auto">
+        <a [href]="item.url" target="_blank" rel="noreferrer noopener">
+          <img [src]="item.image.src" [alt]="item.image.alt" class="w-100" />
+        </a>
+        <figcaption>{{ item.image.caption }}</figcaption>
+      </figure>
+    </div>
+
+    <ng-template #showModal>
+      <figure class="d-block m-auto">
+        <img
+          (click)="createModal(item.modal!)"
+          [src]="item.image.src"
+          [alt]="item.image.alt"
+          class="w-100 cursor-pointer"
+        />
+        <figcaption>{{ item.image.caption }}</figcaption>
+      </figure>
+    </ng-template>
   </div>
 </div>
+
+<app-modal
+  [(isOpen)]="openModal"
+  [image]="modal.image"
+  [title]="modal.title"
+  [text]="modal.text"
+  [url]="modal.url"
+></app-modal>
