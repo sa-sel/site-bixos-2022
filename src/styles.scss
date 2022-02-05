@@ -53,16 +53,16 @@ $percentages: (
 html,
 body,
 :root {
-  background-color: $light;
+  background-color: $white;
   font-family: 'Ubuntu', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
     'Roboto', 'Oxygen';
-  height: 100%;
+  height: 100vh;
 }
 
 a,
 a:link,
 a:visited {
-  color: inherit;
+  color: $blue;
 }
 
 a:hover {
@@ -71,7 +71,16 @@ a:hover {
 }
 
 a:active {
-  color: $secondary !important;
+  color: $dark-blue !important;
+}
+
+img {
+  @extend .img-fluid;
+}
+
+figure img {
+  display: block;
+  margin: auto;
 }
 
 figcaption {
@@ -92,15 +101,7 @@ figcaption {
   border-left: 1px solid $gray-500;
 }
 
-.no-select {
-  -webkit-touch-callout: none !important; /* iOS Safari */
-  -webkit-user-select: none !important; /* Safari */
-  -khtml-user-select: none !important; /* Konqueror HTML */
-  -moz-user-select: none !important; /* Old versions of Firefox */
-  -ms-user-select: none !important; /* Internet Explorer/Edge */
-  user-select: none !important; /* Non-prefixed version, currently
-    supported by Chrome, Edge, Opera and Firefox */
-}
+/*Use "user-select-none" class instead of ".no-select"*/
 
 .text-justify {
   text-align: justify !important;

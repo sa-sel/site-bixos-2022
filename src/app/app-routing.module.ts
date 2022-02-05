@@ -1,7 +1,8 @@
-import { SobreCursoComponent } from './core/sobre-curso/sobre-curso.component'
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { HomeComponent } from '@core'
+import { HomeComponent, SobreCursoComponent } from '@core'
+import { BandejaoComponent } from './core/bandejao/bandejao.component'
+import { MatriculaComponent } from './core/matricula/matricula.component'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -10,11 +11,43 @@ const routes: Routes = [
     component: SobreCursoComponent,
     data: {
       background: [
-        { 
-          src: '/assets/images/sobre-curso/banner.jpg', 
+        {
+          src: '/assets/images/sobre-curso/banner.jpg',
           alt: 'Foto do prédio da SEL, departamento da elétrica'
         },
       ],
+    },
+  },
+  {
+    path: '',
+    component: HomeComponent,
+    data: {
+      background: [
+        { src: '/assets/images/banner.jpg', alt: 'Membros da SA-SEL em 2019' },
+      ],
+      logo: {
+        src: '/assets/images/logo/subtitle.svg',
+        alt: 'Logo da SA-SEL',
+      },
+    },
+  },
+  {
+    path: 'matricula',
+    component: MatriculaComponent,
+    data: {
+      background: [
+        {
+          src: '/assets/images/matricula/banner.jpg',
+          alt: 'Foto do E1, prédio principal da EESC',
+        },
+      ],
+    },
+  },
+  {
+    path: 'bandejao',
+    component: BandejaoComponent,
+    data: {
+      background: [{ src: '/assets/images/bandejao/banner.jpg', alt: 'Foto do banejão' }],
     },
   },
   { path: '**', redirectTo: '/' },

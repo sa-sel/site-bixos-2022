@@ -3,7 +3,7 @@
     <div *ngIf="!item.modal; else showModal">
       <figure class="d-block m-auto">
         <a [href]="item.url" target="_blank" rel="noreferrer noopener">
-          <img [src]="item.image.src" [alt]="item.image.alt" class="w-100" />
+          <img [src]="item.image.src" [alt]="item.image.alt" />
         </a>
         <figcaption>{{ item.image.caption }}</figcaption>
       </figure>
@@ -15,7 +15,7 @@
           (click)="createModal(item.modal!)"
           [src]="item.image.src"
           [alt]="item.image.alt"
-          class="w-100 cursor-pointer"
+          class="cursor-pointer"
         />
         <figcaption>{{ item.image.caption }}</figcaption>
       </figure>

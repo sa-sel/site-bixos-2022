@@ -10,7 +10,15 @@ module.exports = {
     node: true,
     jest: true,
   },
-  ignorePatterns: ['.eslintrc.js', '**/migrations/*', '*.spec.ts'],
+  ignorePatterns: [
+    '.eslintrc.js',
+    '**/migrations/*',
+    '*.spec.ts',
+    'dist/*',
+    '.angular/*',
+    'node_modules/*',
+    '.github/*',
+  ],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',

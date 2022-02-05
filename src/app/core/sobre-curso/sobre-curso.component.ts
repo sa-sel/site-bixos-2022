@@ -8,9 +8,6 @@ import { AlternatingLayoutModel } from '@models'
 export class SobreCursoComponent {
   textAndImageList: AlternatingLayoutModel[] = [
     {
-      text: 'Sim! Nós também vamos falar um pouco sobre a graduação. Afinal de contas é uma parte importante da universidade.',
-    },
-    {
       title: '"Separação" por Ênfases',
       subtitle: true,
       image: {
