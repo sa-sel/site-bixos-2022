@@ -1,5 +1,11 @@
 @import '../../../colors';
 
+.social-network-icon a,
+.social-network-icon a:link,
+.social-network-icon a:visited {
+  color: inherit !important;
+}
+
 .social-network-icon button:hover {
   color: $cyan !important;
   transition: 0.25s;

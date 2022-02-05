@@ -1,32 +1,35 @@
 <aside
-  class="offcanvas offcanvas-start bg-primary text-light"
+  class="offcanvas offcanvas-start bg-dark text-light"
   [class.show]="isOpen"
   id="sidebar"
   aria-labelledby="sidebarLabel"
 >
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="sidebarLabel">Menu de Navegação</h5>
+  <div class="offcanvas-header bg-primary">
+    <h5 class="offcanvas-title" id="sidebarLabel">Pra onde, bixo?</h5>
     <button type="button" class="btn-close text-reset" (click)="sidebar.hide()"></button>
   </div>
 
-  <div class="offcanvas-body">
-    <ul class="list-unstyled d-flex flex-column gap-3">
-      <li *ngFor="let item of items" class="bg-primary">
-        <a
-          class="d-flex gap-1"
-          [routerLink]="item.link.url"
-          [fragment]="item.link.fragment"
-        >
-          <div class="bg-secondary text-center" style="width: 27px">
-            <i [class]="item.icon"></i>
-          </div>
-          {{ item.title.toUpperCase() }}
-        </a>
+  <div class="offcanvas-body d-flex flex-column justify-content-center">
+    <ul class="list-unstyled d-flex flex-column my-0">
+      <li *ngFor="let item of items" class="py-1">
+        <div class="px-1" [class.active]="item.link.url === route">
+          <a
+            class="d-flex gap-2 text-reset text-decoration-none"
+            [routerLink]="item.link.url"
+            [fragment]="item.link.fragment"
+          >
+            <div class="text-center" style="width: 27px">
+              <i [class]="item.icon"></i>
+            </div>
+            {{ item.title.toUpperCase() }}
+          </a>
+          <hr class="m-0" />
+        </div>
       </li>
     </ul>
   </div>
 
   <div class="offcanvas-footer">
-    <span>GRUPOS DOS BIXOS</span>
+    <app-groups-panel color="light" [size]="17"></app-groups-panel>
   </div>
 </aside>

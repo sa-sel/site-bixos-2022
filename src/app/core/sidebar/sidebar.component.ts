@@ -1,12 +1,12 @@
 import {
-    Component,
-    EventEmitter,
-    Input,
-    OnChanges,
-    OnDestroy,
-    OnInit,
-    Output,
-    SimpleChanges
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  Output,
+  SimpleChanges,
 } from '@angular/core'
 import { NavigationEnd, Router } from '@angular/router'
 import { SidebarItemModel } from '@models'

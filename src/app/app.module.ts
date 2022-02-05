@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { FooterComponent, NavbarComponent, SidebarComponent } from '@core'
+import {
+  FooterComponent,
+  GroupsPanelComponent,
+  NavbarComponent,
+  SidebarComponent,
+} from '@core'
 import { SanitizeHtmlPipe } from '@pipes'
 import {
   AlternatingLayoutComponent,
@@ -39,6 +44,7 @@ import { MatriculaComponent } from './core/matricula/matricula.component'
     SidebarComponent,
     SocialMediaIconComponent,
     TitleComponent,
+    GroupsPanelComponent,
   ],
   imports: [
     AppRoutingModule,

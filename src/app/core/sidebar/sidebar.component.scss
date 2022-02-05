@@ -1,11 +1,37 @@
-@import '../../../colors';
+@import 'src/styles';
+/* @import 'src/colors'; */
 
-#sidebar li {
-  margin-bottom: solid 3px $black;
-}
+#sidebar {
+  .offcanvas-header {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.15);
+    box-shadow: rgba(255, 255, 255, 0.05) 0px 6px 24px 0px,
+      rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
+  }
 
-#sidebar a,
-a:link,
-a:visited {
-  color: inherit !important;
+  li > div {
+    &:hover {
+      transition: 0.25s;
+      background-color: $secondary;
+      color: $white !important;
+      @extend .fw-bold;
+
+      hr {
+        display: none;
+      }
+    }
+
+    &.active {
+      @extend .fw-bolder;
+    }
+
+    &:not(.active) {
+      color: darken($light, 21);
+    }
+
+    border-radius: 6px;
+  }
+
+  a:hover {
+    color: inherit !important;
+  }
 }
