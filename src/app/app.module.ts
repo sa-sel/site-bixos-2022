@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { FooterComponent, NavbarComponent } from '@core'
+import { IcExtraComponent, FooterComponent, NavbarComponent } from '@core'
 import { SanitizeHtmlPipe } from '@pipes'
 import {
   AlternatingLayoutComponent,
@@ -20,7 +20,6 @@ import { CarouselModule } from 'ngx-bootstrap/carousel'
 import { BannerRouterComponent } from './core/banner-router/banner-router.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
-import { IcExtraComponent } from './core/ic-extra/ic-extra.component'
 
 @NgModule({
   declarations: [

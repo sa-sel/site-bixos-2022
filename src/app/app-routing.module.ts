@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { HomeComponent } from '@core'
-import { IcExtraComponent } from 'core/ic-extra/ic-extra.component'
+import { HomeComponent, IcExtraComponent } from '@core'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
 
@@ -39,7 +38,7 @@ const routes: Routes = [
     },
   },
   {
-    path: 'ic-extracurriculares',
+    path: 'ic-extra',
     component: IcExtraComponent,
     data: {
       background: [
