@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { HomeComponent, IcExtraComponent } from '@core'
+import { HomeComponent, IcExtraComponent, SobreCursoComponent } from '@core'
+import { MoradiasComponent } from './core/moradias/moradias.component'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
+import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
 
 const routes: Routes = [
@@ -16,6 +18,30 @@ const routes: Routes = [
         src: '/assets/images/logo/subtitle.svg',
         alt: 'Logo da SA-SEL',
       },
+    },
+  },
+  {
+    path: 'bibliotecas',
+    component: BibliotecasComponent,
+    data: {
+      background: [
+        {
+          src: '/assets/images/bibliotecas/banner.jpg',
+          alt: 'Foto da biblioteca da EESC, segundo andar',
+        },
+      ],
+    },
+  },
+  {
+    path: 'curso',
+    component: SobreCursoComponent,
+    data: {
+      background: [
+        {
+          src: '/assets/images/sobre-curso/banner.jpg',
+          alt: 'Foto do prédio da SEL, departamento da elétrica',
+        },
+      ],
     },
   },
   {
@@ -42,11 +68,17 @@ const routes: Routes = [
     component: IcExtraComponent,
     data: {
       background: [
-        { src: '/assets/images/ic-extra/ic-extra.png', alt: 'Foto de um gradiente' },
+        { src: '/assets/images/ic-extra/ic-extra.jpg', alt: 'Foto de um gradiente' },
       ],
     },
   },
-
+  {
+    path: 'moradias',
+    component: MoradiasComponent,
+    data: {
+      background: [{ src: '/assets/images/moradias/moradias.jpg', alt: 'Foto da USP' }],
+    },
+  },
   { path: '**', redirectTo: '/' },
 ]
 
