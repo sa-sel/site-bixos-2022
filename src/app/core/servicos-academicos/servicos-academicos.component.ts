@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 import { ImageGridItemModel } from '@models'
-import { ModalComponent } from '@shared'
 
 @Component({
   selector: 'app-servicos-academicos',
@@ -8,6 +7,7 @@ import { ModalComponent } from '@shared'
 })
 export class ServicosAcademicosComponent {
   openModal = false
+
   benefitsList: ImageGridItemModel[] = [
     {
       image: {
@@ -234,7 +234,4 @@ export class ServicosAcademicosComponent {
       },
     },
   ]
-  toggleModal() {
-    this.openModal = !this.openModal
-  }
 }
