@@ -47,6 +47,9 @@ export class CampusComponent {
     {
       text: 'Quer ver mais fotos do CAASO?<br> Confira no álbum <a target="_blank" rel="noopener noreferrer" href="https://photos.app.goo.gl/3msA5jNUZwsLsUa58">"USP - São Carlos"</a>!',
     },
+    {
+      text: '<iframe width="1120" height="630" src="https://www.youtube-nocookie.com/embed/GCKL3OJyfHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    },
   ]
 
 }
