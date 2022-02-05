@@ -14,10 +14,9 @@ export class MoradiasComponent {
         src: '/assets/images/moradias/entradas.png',
         caption: 'Mapa identificando as principais saídas do Campus I',
       },
-      text: '<h3>Entradas da USP</h3><br><br>No campus I, tem 4 entradas principais, apelidadas de acordo com os prédios que estão próximos. São elas: a <b>física</b>, <b>matemática</b>, <b>produção</b>, e <b>arquitetura</b>.<br><br> Elas são frequentemente utilizadas como referência para procurar apartamentos, e repúblicas. Por exemplo, um anúncio pode dizer: <i>"nossa rep está a 700m da saída da ARQ"</i>.<br><br> Tem apartamentos e reps pertos de todas as quatro saídas; a questão é pesquisar e encontrar aquela que é mais conveniente no seu caso!',
-    },
-    {
-      text: '<h3>Alojamento Estudantil no Campus</h3><br><br> Há no Campus cinco blocos de alojamentos, totalizando 252 vagas. Para garantir uma dessas vagas, é necessário passar por uma seleção dos interessados feita por uma comissão, em que o critério a se avaliar é a situação socioeconômica do aluno de graduação. Vale ressaltar que se você escolher o alojamento como moradia, então você não poderá receber o Auxílio Financeiro disponibilizado pela PAPFE (Programa de Apoio à Permanência e Formação Estudantil) e vice-versa, poderá apenas utilizar os outros auxílios disponíveis, como alimentação e transporte. Para mais informações sobre a PAPFE, clique <a target="_blank" rel="noopener noreferrer" href="https://sites.usp.br/sas/papfe/":>aqui</a>.',
+      title: 'Entrada da USP',
+      subtitle: true,
+      text: 'No campus I, tem 4 entradas principais, apelidadas de acordo com os prédios que estão próximos. São elas: a <b>física</b>, <b>matemática</b>, <b>produção</b>, e <b>arquitetura</b>.<br><br> Elas são frequentemente utilizadas como referência para procurar apartamentos, e repúblicas. Por exemplo, um anúncio pode dizer: <i>"nossa rep está a 700m da saída da ARQ"</i>.<br><br> Tem apartamentos e reps pertos de todas as quatro saídas; a questão é pesquisar e encontrar aquela que é mais conveniente no seu caso!',
     },
   ]
   housingPhotos: ImageGridItemModel[] = [
