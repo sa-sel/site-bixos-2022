@@ -1,15 +1,7 @@
-import {
-    Component,
-    EventEmitter,
-    Input,
-    OnChanges,
-    OnDestroy,
-    OnInit,
-    Output,
-    SimpleChanges
-} from '@angular/core'
+import { Component, OnDestroy, OnInit } from '@angular/core'
 import { NavigationEnd, Router } from '@angular/router'
 import { SidebarItemModel } from '@models'
+import { SidebarService } from '@services'
 import * as bootstrap from 'bootstrap'
 import { Subscription } from 'rxjs'
 
@@ -18,13 +10,10 @@ import { Subscription } from 'rxjs'
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
-export class SidebarComponent implements OnInit, OnChanges, OnDestroy {
-  // two-way data binding
-  @Input() isOpen!: boolean
-  @Output() isOpenChange = new EventEmitter<boolean>()
-
+export class SidebarComponent implements OnInit, OnDestroy {
   route = ''
-  subscription!: Subscription
+  startsOpen = this.sidebarService.isOpen()
+  subscriptions: Subscription[] = []
   sidebar!: bootstrap.Offcanvas
 
   // TODO: move this to .json file
@@ -119,7 +108,7 @@ export class SidebarComponent implements OnInit, OnChanges, OnDestroy {
 
   private expanded?: SidebarItemModel
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private sidebarService: SidebarService) {}
 
   ngOnInit(): void {
     // eslint-disable-next-line
@@ -132,8 +121,7 @@ export class SidebarComponent implements OnInit, OnChanges, OnDestroy {
       // (e.g.: by clicking in the backdrop or pressing <ESC>)
       // set the `isOpen` attribute to false
       sidebarElement.addEventListener('hidden.bs.offcanvas', () => {
-        this.isOpen = false
-        this.isOpenChange.emit(this.isOpen)
+        this.sidebarService.close()
 
         if (this.expanded) {
           this.expanded.collapsed = true
@@ -141,25 +129,28 @@ export class SidebarComponent implements OnInit, OnChanges, OnDestroy {
       })
     }
 
-    this.subscription = this.router.events.subscribe(e => {
-      if (e instanceof NavigationEnd) {
-        this.route = e.urlAfterRedirects.replace('/', '')
-        this.sidebar.hide()
-      }
-    })
+    this.subscriptions.push(
+      this.router.events.subscribe(e => {
+        if (e instanceof NavigationEnd) {
+          this.route = e.urlAfterRedirects.replace('/', '')
+          this.sidebar.hide()
+        }
+      })
+    )
+
+    this.subscriptions.push(
+      this.sidebarService.visibility$.subscribe(isOpen => {
+        isOpen ? this.sidebar.show() : this.sidebar.hide()
+      })
+    )
 
     this.expanded = this.items.find(item => !item.collapsed)
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (this.sidebar) {
-      // eslint-disable-next-line
-      changes['isOpen'].currentValue ? this.sidebar.show() : this.sidebar.hide()
-    }
-  }
-
   ngOnDestroy(): void {
-    this.subscription.unsubscribe()
+    this.subscriptions.forEach(subscription => {
+      subscription.unsubscribe()
+    })
   }
 
   toggleCollapsed(item: SidebarItemModel): void {

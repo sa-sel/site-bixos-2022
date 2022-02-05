@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core'
 import { Router } from '@angular/router'
+import { SidebarService } from '@services'
 
 @Component({
   selector: 'app-navbar',
@@ -11,9 +12,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   @ViewChild('navbar') navbarRef!: ElementRef
 
-  isSidebarOpen = false
-
-  constructor(private router: Router) {}
+  constructor(private router: Router, private sidebarService: SidebarService) {}
 
   ngOnInit(): void {
     if (this.isBelowBanner) {
@@ -33,7 +32,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   openSidebar() {
-    this.isSidebarOpen = true
+    this.sidebarService.open()
   }
 
   goToHomepage(): void {
