@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { FooterComponent, NavbarComponent, SobreCursoComponent } from '@core'
+import {
+  BibliotecasComponent,
+  FooterComponent,
+  NavbarComponent,
+  SobreCursoComponent,
+} from '@core'
 import { SanitizeHtmlPipe } from '@pipes'
 import {
   AlternatingLayoutComponent,
@@ -45,6 +50,7 @@ import { ModalComponent } from './shared/modal/modal.component'
     BannerRouterComponent,
     MatriculaComponent,
     BandejaoComponent,
+    BibliotecasComponent,
   ],
   imports: [
     AppRoutingModule,

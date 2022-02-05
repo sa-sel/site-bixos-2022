@@ -1,13 +1,16 @@
 <app-title>Moradias</app-title>
 <app-alternating-layout [contents]="textAndImageList"></app-alternating-layout>
+
 <section align="justify">
   <app-title [subtitle]="true">Alojamento Estudantil no Campus</app-title>
+
   <p>
     Há no Campus cinco blocos de alojamentos, totalizando 252 vagas. Para garantir uma
     dessas vagas, é necessário passar por uma seleção dos interessados feita por uma
     comissão, em que o critério a se avaliar é a situação socioeconômica do aluno de
     graduação.
   </p>
+
   <p>
     Vale ressaltar que se você escolher o alojamento como moradia, então você não poderá
     receber o Auxílio Financeiro disponibilizado pela PAPFE (Programa de Apoio à
@@ -18,10 +21,13 @@
       >aqui</a
     >.
   </p>
+
+  <app-image-grid [gridItems]="housingPhotos"></app-image-grid>
 </section>
-<app-image-grid [gridItems]="housingPhotos"></app-image-grid>
+
 <section>
   <app-title [subtitle]="true">Grupos no Facebook</app-title>
+
   <p>
     Nos grupos do Facebook, você pode encontrar tanto vagas para repúblicas, quanto para
     apartamento. Os principais grupos são:
