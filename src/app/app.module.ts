@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {
+  BibliotecasComponent,
   FooterComponent,
   GroupsPanelComponent,
   NavbarComponent,
   SidebarComponent,
+  SobreCursoComponent,
 } from '@core'
 import { SanitizeHtmlPipe } from '@pipes'
 import {
@@ -27,26 +29,36 @@ import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BannerRouterComponent } from './core/banner-router/banner-router.component'
 import { HomeComponent } from './core/home/home.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
+import { MoradiasComponent } from './core/moradias/moradias.component'
 
 @NgModule({
   declarations: [
     AlternatingLayoutComponent,
     AppComponent,
     BandejaoComponent,
+    BandejaoComponent,
     BannerComponent,
     BannerRouterComponent,
+    BannerRouterComponent,
+    BibliotecasComponent,
     FooterComponent,
+    GroupsPanelComponent,
+    HomeComponent,
     HomeComponent,
     ImageGridComponent,
     LogoComponent,
     MatriculaComponent,
+    MatriculaComponent,
     ModalComponent,
+    MoradiasComponent,
     NavbarComponent,
     SanitizeHtmlPipe,
     SidebarComponent,
+    SobreCursoComponent,
+    SocialMediaIconComponent,
     SocialMediaIconComponent,
     TitleComponent,
-    GroupsPanelComponent,
+    TitleComponent,
   ],
   imports: [
     AppRoutingModule,

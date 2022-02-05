@@ -1,0 +1,89 @@
+<app-title>Moradias</app-title>
+
+<p>
+  Agora você precisa encontrar um local para chamar de casa, não é mesmo? Pois bem,
+  existem algumas alternativas disponíveis para você escolher, mas para isso é importante
+  conhecer as redondezas.
+</p>
+
+<app-alternating-layout [contents]="textAndImageList"></app-alternating-layout>
+
+<section align="justify">
+  <app-title [subtitle]="true">Alojamento Estudantil no Campus</app-title>
+
+  <p>
+    Há no Campus cinco blocos de alojamentos, totalizando 252 vagas. Para garantir uma
+    dessas vagas, é necessário passar por uma seleção dos interessados feita por uma
+    comissão, em que o critério a se avaliar é a situação socioeconômica do aluno de
+    graduação.
+  </p>
+
+  <p>
+    Vale ressaltar que se você escolher o alojamento como moradia, então você não poderá
+    receber o Auxílio Financeiro disponibilizado pela PAPFE (Programa de Apoio à
+    Permanência e Formação Estudantil) e vice-versa, poderá apenas utilizar os outros
+    auxílios disponíveis, como alimentação e transporte. Para mais informações sobre a
+    PAPFE, clique
+    <a target="_blank" rel="noopener noreferrer" href="https://sites.usp.br/sas/papfe/"
+      >aqui</a
+    >.
+  </p>
+
+  <app-image-grid [gridItems]="housingPhotos"></app-image-grid>
+</section>
+
+<section>
+  <app-title [subtitle]="true">Grupos no Facebook</app-title>
+
+  <p>
+    Nos grupos do Facebook, você pode encontrar tanto vagas para repúblicas, quanto para
+    apartamento. Os principais grupos são:
+  </p>
+  <ul>
+    <li>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.facebook.com/groups/moradiaemobilia/"
+        >Moradia e Mobília Federal/Caaso</a
+      >
+    </li>
+    <li>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.facebook.com/groups/republicasdesaocarlos/"
+        >Repúblicas de São Carlos - SP</a
+      >
+    </li>
+    <li>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.facebook.com/groups/moradia.feminina.sanca"
+        >Repúblicas femininas de São Carlos</a
+      >
+    </li>
+  </ul>
+  <p>
+    No
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://sp.olx.com.br/regiao-de-ribeirao-preto/regiao-de-sao-carlos/sao-carlos/imoveis/aluguel"
+      >OLX</a
+    >, você também consegue encontrar algumas vagas disponíveis de moradias.
+  </p>
+</section>
+
+<br />
+<section>
+  <app-title [subtitle]="true">Imobiliárias de São Carlos</app-title>
+  <p>
+    Existem diversas imobiliárias e casas ao redor do Campus. As imobiliárias você
+    consegue entrar em contato diretamente pelo site deles. Já as casas você geralmente
+    consegue pelo nosso grupo do Facebook para entrar em contato diretamente com o
+    proprietário. Abaixo estão citadas algumas imobiliárias principais:
+  </p>
+  <app-image-grid [gridItems]="realStateAgencies"></app-image-grid>
+</section>

@@ -1,5 +1,5 @@
-import { AlternatingLayoutModel } from './../../models/alternating-layout.model'
 import { Component } from '@angular/core'
+import { AlternatingLayoutModel } from './../../models/alternating-layout.model'
 
 @Component({
   selector: 'app-bandejao',
@@ -39,7 +39,7 @@ export class BandejaoComponent {
         src: '/assets/images/bandejao/marmita.png',
         caption: 'Marmitas servidas durante a pandemia',
       },
-      text: 'Você pode consultar o cardápio do dia pelo <a target="_blank" rel="noopener noreferrer" href="http://www.puspsc.usp.br/cardapio/">site da prefeitura do campus</a>, pelo aplicativo <a target="_blank" rel="noopener noreferrer" href="https://sites.usp.br/sas/exemplo-de-post-2/">Cardápio USP</a>, ou até mesmo por um <a href="https://t.me/BandejaoBot">bot no telegram</a>.<br><br>Durante o período de pandemia o bandejão está sendo oferecido por meio de marmitas. Medidas de segurança como oferecimento de álcool em gel e distanciamento estão sendo seguidas.<br><br>Estudantes com dificuldades socioeconômicas podem acessar o auxílio alimentação oferecido pela <a target="_blank" rel="noopener noreferrer" href="http://www.puspsc.usp.br/bolsas-e-auxilios/">prefeitura do campus</a>',
+      text: 'Você pode consultar o cardápio do dia pelo <a target="_blank" rel="noopener noreferrer" href="http://www.puspsc.usp.br/cardapio/">site da prefeitura do campus</a>, pelo aplicativo <a target="_blank" rel="noopener noreferrer" href="https://sites.usp.br/sas/exemplo-de-post-2/">Cardápio USP</a>, ou até mesmo por um <a href="https://t.me/BandejaoBot" target="_blank" rel="noreferrer noopener">bot no telegram</a>.<br><br>Durante o período de pandemia o bandejão está sendo oferecido por meio de marmitas. Medidas de segurança como oferecimento de álcool em gel e distanciamento estão sendo seguidas.<br><br>Estudantes com dificuldades socioeconômicas podem acessar o auxílio alimentação oferecido pela <a target="_blank" rel="noopener noreferrer" href="http://www.puspsc.usp.br/bolsas-e-auxilios/">prefeitura do campus</a>',
     },
   ]
 }
