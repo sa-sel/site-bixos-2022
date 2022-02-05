@@ -1,0 +1,82 @@
+<app-title [subtitle]="false">IC e Extracurriculares</app-title>
+<p>
+  Um dos grandes diferenciais para o seu crescimento profissional no CAASO são os grupos
+  extracurriculares. Formados e gerenciados por alunos, e auxiliados por professores,
+  esses grupos permitem um contato direto com a prática da engenharia nas áreas mais
+  diversas bem como um maior engajamento com a comunidade ou causas sociais.
+</p>
+<p>
+  São muitas opções de acordo com o seu interesse, você pode construir um carro, robô ou
+  avião para uma competição, fazer parte do grande movimento estudantil, trabalhar com a
+  gestão de pessoas e recursos em diversos projetos ou até mesmo dar aulas para crianças
+  da região. Várias dessas opções serão apresentadas em uma palestra na semana de
+  recepção.
+</p>
+<p>
+  Você vai ter oportunidades que oferecem aprendizados que agregam muito para sua
+  formação. Além de conhecer tecnologias diferentes e colocar a mão na massa para conhecer
+  o verdadeiro trabalho de um engenheiro, você também pode conhecer muitas pessoas novas e
+  viver grandes experiências. Em todos os casos, o melhor conselho é:
+</p>
+<h6 class="text-center">
+  Aproveite ao máximo tudo o que a universidade tem para oferecer!
+</h6>
+<br />
+<h5>Extracurriculares Técnicas</h5>
+<p>
+  São grupos voltados para o conhecimento técnico na área da Engenharia, eles são uma
+  forma muito boa de aplicar e estender o conhecimento recebido na graduação.
+</p>
+<h5>Centro Acadêmico, Secretarias Acadêmicas, Coletivos e Grupos Religiosos</h5>
+<p>
+  Uma das formas de atividades extracurriculares mais importantes na USP São Carlos são os
+  grupos representativos. Entre elas, tem o CAASO que é o centro acadêmico da USP - São
+  Carlos, e a SA-SEL que é a Secretaria Acadêmica da Elétrica que representa os alunos da
+  Elétrica. Também existem coletivos que representam os alunos de acordo com o tema de
+  cada um.
+</p>
+<h5>Iniciações Científicas</h5>
+<p>
+  Participar de uma iniciação científica pode ser um incrível oportunidade de aprendizado.
+  Fale com professores que façam pesquisa em alguma área que te interesse para saber mais.
+  As modalidades de iniciação científica oferecida pela EESC são:
+</p>
+<ul>
+  <li><h6>Programa Institucional de Bolsas de Iniciação Científica (PIBIC)</h6></li>
+  <li>
+    <h6>
+      Programa Institucional de Bolsas de Iniciação em Desenvolvimento Tecnológico e
+      Inovação (PIBITI)
+    </h6>
+  </li>
+  <li><h6>Iniciação Científica sem remuneração</h6></li>
+</ul>
+<br />
+<br />
+<h5>Extras</h5>
+<br />
+<table class="table text-center table-bordered table-hover table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Grupo</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Site</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let extra of extras">
+      <td>{{ extra.grupo }}</td>
+      <td>{{ extra.categoria }}</td>
+      <td>
+        <a [href]="extra.site" target="_blank" rel="noopener noreferrer">{{
+          extra.site
+        }}</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<p>
+  OBS: Essa é apenas uma amostra de algumas das extras mais conhecidas, também existem
+  outras!
+</p>

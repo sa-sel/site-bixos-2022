@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { HomeComponent } from '@core'
+import { IcExtraComponent } from 'core/ic-extra/ic-extra.component'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
 
@@ -37,6 +38,16 @@ const routes: Routes = [
       background: [{ src: '/assets/images/bandejao/banner.jpg', alt: 'Foto do banejão' }],
     },
   },
+  {
+    path: 'ic-extracurriculares',
+    component: IcExtraComponent,
+    data: {
+      background: [
+        { src: '/assets/images/ic-extra/ic-extra.png', alt: 'Foto de um gradiente' },
+      ],
+    },
+  },
+
   { path: '**', redirectTo: '/' },
 ]
 
