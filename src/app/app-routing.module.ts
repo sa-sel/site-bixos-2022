@@ -4,6 +4,7 @@ import { HomeComponent, SobreCursoComponent } from '@core'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
+import { ProjetoAmpereComponent } from './core/projeto-ampere/projeto-ampere.component'
 
 const routes: Routes = [
   {
@@ -60,6 +61,15 @@ const routes: Routes = [
     component: BandejaoComponent,
     data: {
       background: [{ src: '/assets/images/bandejao/banner.jpg', alt: 'Foto do banejão' }],
+    },
+  },
+  {
+    path: 'projeto-ampere',
+    component: ProjetoAmpereComponent,
+    data: {
+      background: [
+        { src: 'assets/images/projeto-ampere/banner.png', alt: 'projeto ampere' },
+      ],
     },
   },
   { path: '**', redirectTo: '/' },

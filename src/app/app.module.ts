@@ -25,6 +25,7 @@ import { BannerRouterComponent } from './core/banner-router/banner-router.compon
 import { HomeComponent } from './core/home/home.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
 import { ModalComponent } from './shared/modal/modal.component'
+import { ProjetoAmpereComponent } from './core/projeto-ampere/projeto-ampere.component'
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ModalComponent } from './shared/modal/modal.component'
     TitleComponent,
     HomeComponent,
     BibliotecasComponent,
+    ProjetoAmpereComponent,
   ],
   imports: [
     AppRoutingModule,
