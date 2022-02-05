@@ -39,7 +39,7 @@ const routes: Routes = [
     },
   },
   {
-    path: 'servicosacademicos',
+    path: 'servicos-academicos',
     component: ServicosAcademicosComponent,
     data: {
       background: [
