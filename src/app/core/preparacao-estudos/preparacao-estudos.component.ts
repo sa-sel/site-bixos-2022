@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { ImageGridItemModel } from '@models';
+import { Component } from '@angular/core'
+import { ImageGridItemModel } from '@models'
 
 @Component({
   selector: 'app-preparacao-estudos',
   templateUrl: './preparacao-estudos.component.html',
 })
-export class PreparacaoEstudosComponent  {
+export class PreparacaoEstudosComponent {
   taskManager: ImageGridItemModel[] = [
     {
       image: {

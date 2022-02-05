@@ -42,11 +42,12 @@ const routes: Routes = [
     path: 'preparacao-estudos',
     component: PreparacaoEstudosComponent,
     data: {
-      background: [{ src: '/assets/images/preparacao/banner.png', alt: 'Banner da preparacao'}],
+      background: [
+        { src: '/assets/images/preparacao/banner.png', alt: 'Banner da preparacao' },
+      ],
     },
   },
   { path: '**', redirectTo: '/' },
-
 ]
 
 @NgModule({
