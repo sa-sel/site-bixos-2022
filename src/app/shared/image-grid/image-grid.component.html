@@ -5,7 +5,10 @@
         <a [href]="item.url" target="_blank" rel="noreferrer noopener">
           <img [src]="item.image.src" [alt]="item.image.alt" />
         </a>
-        <figcaption>{{ item.image.caption }}</figcaption>
+        <figcaption
+          *ngIf="item.image.caption"
+          [innerHTML]="item.image.caption | sanitizeHtml"
+        ></figcaption>
       </figure>
     </div>
 
@@ -17,7 +20,10 @@
           [alt]="item.image.alt"
           class="cursor-pointer"
         />
-        <figcaption>{{ item.image.caption }}</figcaption>
+        <figcaption
+          *ngIf="item.image.caption"
+          [innerHTML]="item.image.caption | sanitizeHtml"
+        ></figcaption>
       </figure>
     </ng-template>
   </div>

@@ -1,5 +1,7 @@
 export * from './banner-router/banner-router.component'
+export * from './bibliotecas/bibliotecas.component'
 export * from './footer/footer.component'
 export * from './home/home.component'
 export * from './navbar/navbar.component'
 export * from './preparacao-estudos/preparacao-estudos.component'
+export * from './sobre-curso/sobre-curso.component'
