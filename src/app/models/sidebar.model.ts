@@ -1,14 +1,10 @@
-interface LinkModel {
-  url: string
-  fragment?: string
-}
-
 export interface SidebarItemModel {
   title: string
   icon: string
-  link: LinkModel
+  route: string
+  collapsed: boolean
   subitems?: {
     title: string
-    link: LinkModel
+    id: string
   }[]
 }

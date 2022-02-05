@@ -1,6 +1,14 @@
 @import 'src/styles';
 /* @import 'src/colors'; */
 
+.sidebar-hover {
+  &:hover {
+    transition: 0.25s;
+    color: $white !important;
+    @extend .fw-bold;
+  }
+}
+
 #sidebar {
   .offcanvas-header {
     border-bottom: solid 1px rgba(255, 255, 255, 0.15);
@@ -8,13 +16,11 @@
       rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
   }
 
-  li > div {
-    &:hover {
-      transition: 0.25s;
-      background-color: $secondary;
-      color: $white !important;
-      @extend .fw-bold;
+  li:not(.expanded) div.page {
+    @extend .sidebar-hover;
 
+    &:hover {
+      background-color: $secondary;
       hr {
         display: none;
       }
@@ -31,7 +37,22 @@
     border-radius: 6px;
   }
 
+  .subtopic a {
+    @extend .sidebar-hover;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+
   a:hover {
     color: inherit !important;
+  }
+
+  .expanded {
+    transition: 0.25s;
+    background-color: $primary;
+    color: $white !important;
+    @extend .fw-bold;
   }
 }

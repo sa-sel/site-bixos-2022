@@ -1,12 +1,12 @@
 import {
-  Component,
-  EventEmitter,
-  Input,
-  OnChanges,
-  OnDestroy,
-  OnInit,
-  Output,
-  SimpleChanges,
+    Component,
+    EventEmitter,
+    Input,
+    OnChanges,
+    OnDestroy,
+    OnInit,
+    Output,
+    SimpleChanges
 } from '@angular/core'
 import { NavigationEnd, Router } from '@angular/router'
 import { SidebarItemModel } from '@models'
@@ -26,85 +26,98 @@ export class SidebarComponent implements OnInit, OnChanges, OnDestroy {
   route = ''
   subscription!: Subscription
   sidebar!: bootstrap.Offcanvas
+
+  // TODO: move this to .json file
+  // TODO: make scrolling to fragment stop a little higher (because of navbar)
+  // https://stackoverflow.com/questions/24665602/scrollintoview-scrolls-just-too-far
   items: SidebarItemModel[] = [
     {
       title: 'Página Inicial',
       icon: 'fas fa-home',
-      link: {
-        url: '',
-      },
+      route: '',
+      collapsed: true,
     },
     {
       title: 'Semana de Recepção',
       icon: 'fas fa-calendar', // far fa-calendar, fas fa-calendar-week
-      link: {
-        url: 'recepcao',
-      },
+      route: 'recepcao',
+      collapsed: true,
     },
     {
       title: 'Kit Bixo',
       icon: 'fas fa-tshirt', // fas fa-gifts, fas fa-gift
-      link: {
-        url: 'kit-bixo',
-      },
+      route: 'kit-bixo',
+      collapsed: true,
     },
     {
       title: 'Matrícula',
       icon: 'fas fa-passport',
-      link: {
-        url: 'matricula',
-      },
+      route: 'matricula',
+      collapsed: true,
+      subitems: [
+        {
+          title: 'Fluxograma',
+          id: 'flowchart',
+        },
+        {
+          title: 'Datas das chamadas',
+          id: 'dates',
+        },
+        {
+          title: 'Matrícula',
+          id: 'enrollment',
+        },
+        {
+          title: 'Local de matrícula',
+          id: 'places',
+        },
+      ],
     },
     {
       title: 'Sobre o curso',
       icon: 'fas fa-graduation-cap',
-      link: {
-        url: 'curso',
-      },
+      route: 'curso',
+      collapsed: true,
     },
     {
       title: 'Projeto Ampére',
       icon: 'fab fa-youtube', // fab fa-youtube-square, fas fa-pen, fas fa-book
-      link: {
-        url: 'projeto-ampere',
-      },
+      route: 'projeto-ampere',
+      collapsed: true,
     },
     {
       title: 'Serviços Acadêmicos',
       icon: 'fas fa-user-graduate',
-      link: {
-        url: 'servicos-academicos',
-      },
+      route: 'servicos-academicos',
+      collapsed: true,
     },
     {
       title: 'ICs e Extracurriculares',
       icon: 'fas fa-microscope', // fas fa-atom
-      link: {
-        url: 'ic-extras',
-      },
+      route: 'ic-extras',
+      collapsed: true,
     },
     {
       title: 'Bandejão',
       icon: 'fas fa-utensils',
-      link: {
-        url: 'bandejao',
-      },
+      route: 'bandejao',
+      collapsed: true,
     },
     {
       title: 'Bibliotecas',
       icon: 'fas fa-book-reader',
-      link: {
-        url: 'bibliotecas',
-      },
+      route: 'bibliotecas',
+      collapsed: true,
     },
     {
       title: 'Moradias',
       icon: 'fas fa-house-user',
-      link: {
-        url: 'moradias',
-      },
+      route: 'moradias',
+      collapsed: true,
     },
   ]
+
+  private expanded?: SidebarItemModel
 
   constructor(private router: Router) {}
 
@@ -121,6 +134,10 @@ export class SidebarComponent implements OnInit, OnChanges, OnDestroy {
       sidebarElement.addEventListener('hidden.bs.offcanvas', () => {
         this.isOpen = false
         this.isOpenChange.emit(this.isOpen)
+
+        if (this.expanded) {
+          this.expanded.collapsed = true
+        }
       })
     }
 
@@ -130,6 +147,8 @@ export class SidebarComponent implements OnInit, OnChanges, OnDestroy {
         this.sidebar.hide()
       }
     })
+
+    this.expanded = this.items.find(item => !item.collapsed)
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -141,5 +160,19 @@ export class SidebarComponent implements OnInit, OnChanges, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe()
+  }
+
+  toggleCollapsed(item: SidebarItemModel): void {
+    if (item.collapsed) {
+      if (this.expanded) {
+        this.expanded.collapsed = true
+      }
+
+      this.expanded = item
+      item.collapsed = false
+    } else {
+      this.expanded = undefined
+      item.collapsed = true
+    }
   }
 }

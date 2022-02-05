@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {
   FooterComponent,
   GroupsPanelComponent,
@@ -17,6 +18,7 @@ import {
   TitleComponent,
 } from '@shared'
 import { CarouselModule } from 'ngx-bootstrap/carousel'
+import { CollapseModule } from 'ngx-bootstrap/collapse'
 import { ModalModule } from 'ngx-bootstrap/modal'
 import { TooltipModule } from 'ngx-bootstrap/tooltip'
 import { AppRoutingModule } from './app-routing.module'
@@ -48,8 +50,10 @@ import { MatriculaComponent } from './core/matricula/matricula.component'
   ],
   imports: [
     AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
     CarouselModule.forRoot(),
+    CollapseModule.forRoot(),
     ModalModule.forRoot(),
     TooltipModule.forRoot(),
   ],
