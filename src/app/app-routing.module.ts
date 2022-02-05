@@ -5,11 +5,22 @@ import { HomeComponent } from '@core'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'bibliotecas', component: BibliotecasComponent },
   // { path: 'kit-bixo', component: KitBixoComponent },
   // { path: 'projeto-ampere', component: ProjetoAmpereComponent },
   // { path: 'ic-extras', component: IcExtrasComponent },
   // ...
+  {
+    path: 'bibliotecas',
+    component: BibliotecasComponent,
+    data: {
+      background: [
+        { 
+          src: '/assets/images/bibliotecas/banner.jpg', 
+          alt: 'Foto da biblioteca da EESC, segundo andar'
+        },
+      ],
+    },
+  },
   { path: '**', redirectTo: '/' },
 ]
 
