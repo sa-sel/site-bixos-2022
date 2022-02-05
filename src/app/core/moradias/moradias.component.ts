@@ -1,6 +1,5 @@
-import { AlternatingLayoutModel } from './../../models/alternating-layout.model'
-import { ImageGridItemModel } from '@models'
 import { Component } from '@angular/core'
+import { AlternatingLayoutModel, ImageGridItemModel } from '@models'
 
 @Component({
   selector: 'app-moradias',
@@ -9,16 +8,17 @@ import { Component } from '@angular/core'
 export class MoradiasComponent {
   textAndImageList: AlternatingLayoutModel[] = [
     {
+      title: 'Entrada da USP',
+      subtitle: true,
       image: {
         alt: 'mapa do campus I',
         src: '/assets/images/moradias/entradas.png',
         caption: 'Mapa identificando as principais saídas do Campus I',
       },
-      title: 'Entrada da USP',
-      subtitle: true,
       text: 'No campus I, tem 4 entradas principais, apelidadas de acordo com os prédios que estão próximos. São elas: a <b>física</b>, <b>matemática</b>, <b>produção</b>, e <b>arquitetura</b>.<br><br> Elas são frequentemente utilizadas como referência para procurar apartamentos, e repúblicas. Por exemplo, um anúncio pode dizer: <i>"nossa rep está a 700m da saída da ARQ"</i>.<br><br> Tem apartamentos e reps pertos de todas as quatro saídas; a questão é pesquisar e encontrar aquela que é mais conveniente no seu caso!',
     },
   ]
+
   housingPhotos: ImageGridItemModel[] = [
     {
       image: {
@@ -49,6 +49,7 @@ export class MoradiasComponent {
       },
     },
   ]
+
   realStateAgencies: ImageGridItemModel[] = [
     {
       image: {
