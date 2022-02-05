@@ -1,6 +1,6 @@
 <div class="m-0 p-0 w-100 h-100">
   <div class="banner-container">
-    <div class="bg-dark w-100 h-100"></div>
+    <div class="bg-dark"></div>
 
     <div
       *ngIf="background.length == 1; else carouselBlock"
@@ -25,6 +25,6 @@
   </div>
 
   <div class="logo-container w-50">
-    <img *ngIf="logo" [src]="logo.src" [alt]="logo.alt" class="w-100" />
+    <img *ngIf="logo" [src]="logo.src" [alt]="logo.alt" />
   </div>
 </div>

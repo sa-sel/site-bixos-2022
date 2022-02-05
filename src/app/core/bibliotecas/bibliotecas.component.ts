@@ -1,6 +1,5 @@
-import { ImageGridItemModel } from './../../models/image-grid.model'
 import { Component } from '@angular/core'
-import { AlternatingLayoutModel } from '@models'
+import { AlternatingLayoutModel, ImageGridItemModel } from '@models'
 
 @Component({
   selector: 'app-bibliotecas',
@@ -9,10 +8,8 @@ import { AlternatingLayoutModel } from '@models'
 export class BibliotecasComponent {
   textAndImageList: AlternatingLayoutModel[] = [
     {
-      text: 'Salas de Estudos',
+      title: 'Salas de Estudos',
       subtitle: true,
-    },
-    {
       image: {
         alt: 'interior do aquario',
         src: 'assets/images/bibliotecas/aquario.png',
@@ -21,10 +18,8 @@ export class BibliotecasComponent {
       text: 'As bibliotecas da EESC, ICMC, e IFSC possuem salas de estudo 24h. A da EESC fica logo ao lado da biblioteca e é chamada de "aquário".<br><br>Durante o horário de funcionamento das bibliotecas, há também áreas de estudo adicionais. Na biblioteca do ICMC e IFSC, há salas fechadas que podem ser utilizadas por grupos de estudantes.',
     },
     {
-      text: 'Pró Aluno',
+      title: 'Pró Aluno - EESC',
       subtitle: true,
-    },
-    {
       image: {
         alt: 'pro aluno eesc',
         src: 'assets/images/bibliotecas/proaluno.png',

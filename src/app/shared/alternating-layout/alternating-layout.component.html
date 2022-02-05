@@ -2,20 +2,30 @@
   <div *ngFor="let item of contents">
     <!--Only image-->
     <div *ngIf="item.image && !item.text">
+      <app-title *ngIf="item.title" [subtitle]="!!item.subtitle">{{
+        item.title
+      }}</app-title>
+
       <figure class="m-0">
-        <img [src]="item.image.src" [alt]="item.image.alt" class="w-100" />
+        <img [src]="item.image.src" [alt]="item.image.alt" />
         <figcaption>{{ item.image.caption }}</figcaption>
       </figure>
     </div>
 
     <!--Only text-->
     <div *ngIf="!item.image && item.text">
-      <app-title *ngIf="item.subtitle" [subtitle]="true">{{ item.text }}</app-title>
+      <app-title *ngIf="item.title" [subtitle]="!!item.subtitle">{{
+        item.title
+      }}</app-title>
       <p *ngIf="!item.subtitle" [innerHTML]="item.text | sanitizeHtml"></p>
     </div>
 
     <!--Image and text-->
     <div *ngIf="item.image && item.text && item.imageOnLeft !== undefined">
+      <app-title *ngIf="item.title" [subtitle]="!!item.subtitle">{{
+        item.title
+      }}</app-title>
+
       <!-- ngClass is used to toggle wrap mode if image is smaller than text -->
       <div
         [ngClass]="text.offsetHeight < image.offsetHeight ? 'row' : ''"
@@ -27,7 +37,7 @@
           [ngClass]="item.imageOnLeft ? 'float-md-start' : 'order-md-2 float-md-end'"
         >
           <figure class="m-0">
-            <img [src]="item.image.src" [alt]="item.image.alt" class="w-100" />
+            <img [src]="item.image.src" [alt]="item.image.alt" />
             <figcaption>{{ item.image.caption }}</figcaption>
           </figure>
         </div>
