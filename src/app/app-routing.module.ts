@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { HomeComponent } from '@core'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
+import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
 
 const routes: Routes = [
   {
@@ -35,6 +36,15 @@ const routes: Routes = [
     component: BandejaoComponent,
     data: {
       background: [{ src: '/assets/images/bandejao/banner.jpg', alt: 'Foto do banejão' }],
+    },
+  },
+  {
+    path: 'servicosacademicos',
+    component: ServicosAcademicosComponent,
+    data: {
+      background: [
+        { src: '/assets/images/servicos-academicos/banner.jpg', alt: 'Foto do campus da USP de São Carlos' },
+      ],
     },
   },
   { path: '**', redirectTo: '/' },
