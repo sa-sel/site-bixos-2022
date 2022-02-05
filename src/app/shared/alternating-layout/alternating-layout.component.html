@@ -3,7 +3,7 @@
     <!--Only image-->
     <div *ngIf="item.image && !item.text">
       <figure class="m-0">
-        <img [src]="item.image.src" [alt]="item.image.alt" class="w-100" />
+        <img [src]="item.image.src" [alt]="item.image.alt" />
         <figcaption>{{ item.image.caption }}</figcaption>
       </figure>
     </div>
@@ -26,7 +26,7 @@
           [ngClass]="item.imageOnLeft ? 'float-md-start' : 'order-md-2 float-md-end'"
         >
           <figure class="m-0">
-            <img [src]="item.image.src" [alt]="item.image.alt" class="w-100" />
+            <img [src]="item.image.src" [alt]="item.image.alt" />
             <figcaption>{{ item.image.caption }}</figcaption>
           </figure>
         </div>

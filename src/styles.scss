@@ -74,6 +74,15 @@ a:active {
   color: $dark-blue !important;
 }
 
+img {
+  @extend .img-fluid;
+}
+
+figure img {
+  display: block;
+  margin: auto;
+}
+
 figcaption {
   @extend .text-muted;
   @extend .small;
