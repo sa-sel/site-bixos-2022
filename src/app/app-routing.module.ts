@@ -43,7 +43,10 @@ const routes: Routes = [
     component: ServicosAcademicosComponent,
     data: {
       background: [
-        { src: '/assets/images/servicos-academicos/banner.jpg', alt: 'Foto do campus da USP de São Carlos' },
+        {
+          src: '/assets/images/servicos-academicos/banner.jpg',
+          alt: 'Foto do campus da USP de São Carlos',
+        },
       ],
     },
   },
