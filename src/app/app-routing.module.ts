@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { HomeComponent } from '@core'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
+import { PreparacaoEstudosComponent } from 'core/preparacao-estudos/preparacao-estudos.component'
 
 const routes: Routes = [
   {
@@ -37,7 +38,15 @@ const routes: Routes = [
       background: [{ src: '/assets/images/bandejao/banner.jpg', alt: 'Foto do banejão' }],
     },
   },
+  {
+    path: 'preparacao-estudos',
+    component: PreparacaoEstudosComponent,
+    data: {
+      background: [{ src: '/assets/images/preparacao/banner.png', alt: 'Banner da preparacao'}],
+    },
+  },
   { path: '**', redirectTo: '/' },
+
 ]
 
 @NgModule({
