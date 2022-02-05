@@ -5,11 +5,18 @@ import { HomeComponent } from '@core'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'curso', component: SobreCursoComponent },
-  // { path: 'kit-bixo', component: KitBixoComponent },
-  // { path: 'projeto-ampere', component: ProjetoAmpereComponent },
-  // { path: 'ic-extras', component: IcExtrasComponent },
-  // ...
+  {
+    path: 'curso',
+    component: SobreCursoComponent,
+    data: {
+      background: [
+        { 
+          src: '/assets/images/sobre-curso/banner.jpg', 
+          alt: 'Foto do prédio da SEL, departamento da elétrica'
+        },
+      ],
+    },
+  },
   { path: '**', redirectTo: '/' },
 ]
 
