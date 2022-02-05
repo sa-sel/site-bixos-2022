@@ -1,7 +1,39 @@
 <app-title>Moradias</app-title>
-<app-alternating-layout [contents]="textAndImageList1"></app-alternating-layout>
-<app-image-grid [gridItems]="[image1, image2, image3, image4]"></app-image-grid>
-<app-alternating-layout [contents]="textAndImageList2"></app-alternating-layout>
-<app-image-grid
-  [gridItems]="[imobi1, imobi2, imobi3, imobi4, imobi5, imobi6]"
-></app-image-grid>
+<app-alternating-layout [contents]="textAndImageList"></app-alternating-layout>
+<app-image-grid [gridItems]="housingPhotos"></app-image-grid>
+<app-title [subtitle]="true">Grupos no Facebook</app-title>
+<br /><br />
+<p>
+  Nesses grupos no facebook, você pode encontrar: vagas para repúblicas, vagas para
+  apartamento:<br /><br /><a
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://www.facebook.com/groups/moradiaemobilia/"
+    >Moradia e Mobília Federal/Caaso</a
+  ><br /><a
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://www.facebook.com/groups/republicasdesaocarlos/"
+    >Repúblicas de São Carlos - SP</a
+  ><br /><a
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://www.facebook.com/groups/moradia.feminina.sanca"
+    >Repúblicas femininas de São Carlos</a
+  ><br /><br />No
+  <a
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://sp.olx.com.br/regiao-de-ribeirao-preto/regiao-de-sao-carlos/sao-carlos/imoveis/aluguel"
+    >OLX</a
+  >, você também consegue encontrar algumas vagas disponíveis de moradias.
+</p>
+<app-title [subtitle]="true">Imobiliárias de São Carlos</app-title>
+<br /><br />
+<p>
+  Existem diversas imobiliárias e casas ao redor do Campus. As imobiliárias você consegue
+  entrar em contato diretamente pelo site deles. Já as casas você geralmente consegue pelo
+  nosso grupo do Facebook para entrar em contato diretamente com o proprietário. Abaixo
+  estão citadas algumas imobiliárias principais:
+</p>
+<app-image-grid [gridItems]="realStateAgencies"></app-image-grid>
