@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { HomeComponent } from '@core'
+import { CampusComponent } from 'core/campus/campus.component'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
 
@@ -35,6 +36,13 @@ const routes: Routes = [
     component: BandejaoComponent,
     data: {
       background: [{ src: '/assets/images/bandejao/banner.jpg', alt: 'Foto do banejão' }],
+    },
+  },
+  {
+    path: 'campus',
+    component: CampusComponent,
+    data: {
+      background: [{ src: 'assets/images/campus/banner.jpg', alt: 'Evento no cmpus'}],
     },
   },
   { path: '**', redirectTo: '/' },
