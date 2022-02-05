@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser'
 import { FooterComponent, NavbarComponent, SobreCursoComponent } from '@core'
 import { SanitizeHtmlPipe } from '@pipes'
 import {
-    AlternatingLayoutComponent,
-    BannerComponent,
-    ImageGridComponent,
-    LogoComponent,
-    SocialMediaIconComponent,
-    TitleComponent
+  AlternatingLayoutComponent,
+  BannerComponent,
+  ImageGridComponent,
+  LogoComponent,
+  SocialMediaIconComponent,
+  TitleComponent,
 } from '@shared'
 import { CarouselModule } from 'ngx-bootstrap/carousel'
 import { ModalModule } from 'ngx-bootstrap/modal'

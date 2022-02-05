@@ -13,7 +13,7 @@ const routes: Routes = [
       background: [
         {
           src: '/assets/images/sobre-curso/banner.jpg',
-          alt: 'Foto do prédio da SEL, departamento da elétrica'
+          alt: 'Foto do prédio da SEL, departamento da elétrica',
         },
       ],
     },
