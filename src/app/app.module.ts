@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {
   BibliotecasComponent,
+  CampusComponent,
   FooterComponent,
   GroupsPanelComponent,
   IcExtraComponent,
   NavbarComponent,
+  PreparacaoEstudosComponent,
   SemanaDeRecepcaoComponent,
   SidebarComponent,
   SobreCursoComponent,
-  CampusComponent,
   ProjetoAmpereComponent,
 } from '@core'
 import { SanitizeHtmlPipe } from '@pipes'
@@ -55,6 +56,7 @@ import { MoradiasComponent } from './core/moradias/moradias.component'
     ModalComponent,
     MoradiasComponent,
     NavbarComponent,
+    PreparacaoEstudosComponent,
     SanitizeHtmlPipe,
     SemanaDeRecepcaoComponent,
     ServicosAcademicosComponent,
