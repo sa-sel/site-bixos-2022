@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {
   BibliotecasComponent,
   FooterComponent,
+  GroupsPanelComponent,
+  IcExtraComponent,
   NavbarComponent,
+  SemanaDeRecepcaoComponent,
+  SidebarComponent,
   SobreCursoComponent,
+  CampusComponent,
+  ProjetoAmpereComponent,
 } from '@core'
 import { SanitizeHtmlPipe } from '@pipes'
 import {
@@ -12,10 +19,13 @@ import {
   BannerComponent,
   ImageGridComponent,
   LogoComponent,
+  ModalComponent,
   SocialMediaIconComponent,
   TitleComponent,
 } from '@shared'
+import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
 import { CarouselModule } from 'ngx-bootstrap/carousel'
+import { CollapseModule } from 'ngx-bootstrap/collapse'
 import { ModalModule } from 'ngx-bootstrap/modal'
 import { TooltipModule } from 'ngx-bootstrap/tooltip'
 import { AppRoutingModule } from './app-routing.module'
@@ -24,8 +34,7 @@ import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BannerRouterComponent } from './core/banner-router/banner-router.component'
 import { HomeComponent } from './core/home/home.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
-import { ModalComponent } from './shared/modal/modal.component'
-import { ProjetoAmpereComponent } from './core/projeto-ampere/projeto-ampere.component'
+import { MoradiasComponent } from './core/moradias/moradias.component'
 
 @NgModule({
   declarations: [
@@ -34,14 +43,22 @@ import { ProjetoAmpereComponent } from './core/projeto-ampere/projeto-ampere.com
     BandejaoComponent,
     BannerComponent,
     BannerRouterComponent,
+    BibliotecasComponent,
+    CampusComponent,
     FooterComponent,
+    GroupsPanelComponent,
     HomeComponent,
+    IcExtraComponent,
     ImageGridComponent,
     LogoComponent,
     MatriculaComponent,
     ModalComponent,
+    MoradiasComponent,
     NavbarComponent,
     SanitizeHtmlPipe,
+    SemanaDeRecepcaoComponent,
+    ServicosAcademicosComponent,
+    SidebarComponent,
     SobreCursoComponent,
     SocialMediaIconComponent,
     TitleComponent,
@@ -51,8 +68,10 @@ import { ProjetoAmpereComponent } from './core/projeto-ampere/projeto-ampere.com
   ],
   imports: [
     AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
     CarouselModule.forRoot(),
+    CollapseModule.forRoot(),
     ModalModule.forRoot(),
     TooltipModule.forRoot(),
   ],
