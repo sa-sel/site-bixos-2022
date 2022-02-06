@@ -1,10 +1,10 @@
 <aside
-  class="offcanvas offcanvas-start bg-dark text-light"
+  class="offcanvas offcanvas-start bg-light"
   [class.show]="startsOpen"
   id="sidebar"
   aria-labelledby="sidebarLabel"
 >
-  <div class="offcanvas-header bg-primary py-2">
+  <div class="offcanvas-header bg-primary py-2 text-light">
     <h5 class="offcanvas-title" id="sidebarLabel">Pra onde, bixo?</h5>
     <button type="button" class="btn-close text-reset" (click)="sidebar.hide()"></button>
   </div>
@@ -12,7 +12,11 @@
   <div class="offcanvas-body d-flex flex-column justify-content-center">
     <ul class="list-unstyled d-flex flex-column my-0">
       <li *ngFor="let item of items" class="py-1" [class.expanded]="!item.collapsed">
-        <div class="px-1 page" [class.active]="item.route === route">
+        <div
+          class="px-1 page"
+          [class.fw-bolder]="item.route === route"
+          [class.text-muted]="item.route !== route"
+        >
           <div class="d-flex justify-content-between align-items-center px-3">
             <a
               class="d-flex gap-2 text-reset text-decoration-none"
@@ -54,6 +58,6 @@
   </div>
 
   <div class="offcanvas-footer">
-    <app-groups-panel color="light" [size]="17"></app-groups-panel>
+    <app-groups-panel color="dark" [size]="17"></app-groups-panel>
   </div>
 </aside>

@@ -4,16 +4,15 @@
 .sidebar-hover {
   &:hover {
     transition: 0.25s;
-    color: $white !important;
+    color: $light !important;
     @extend .fw-bold;
   }
 }
 
 #sidebar {
   .offcanvas-header {
-    border-bottom: solid 1px rgba(255, 255, 255, 0.15);
-    box-shadow: rgba(255, 255, 255, 0.05) 0px 6px 24px 0px,
-      rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   }
 
   li:not(.expanded) div.page {
@@ -24,14 +23,6 @@
       hr {
         display: none;
       }
-    }
-
-    &.active {
-      @extend .fw-bolder;
-    }
-
-    &:not(.active) {
-      color: darken($light, 21);
     }
 
     border-radius: 6px;
@@ -52,7 +43,7 @@
   .expanded {
     transition: 0.25s;
     background-color: $primary;
-    color: $white !important;
+    color: $light !important;
     @extend .fw-bold;
   }
 }
