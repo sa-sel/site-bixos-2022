@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { HomeComponent, IcExtraComponent, SobreCursoComponent } from '@core'
-import { MoradiasComponent } from './core/moradias/moradias.component'
+import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
+import { MoradiasComponent } from './core/moradias/moradias.component'
 
 const routes: Routes = [
   {
@@ -69,6 +70,18 @@ const routes: Routes = [
     data: {
       background: [
         { src: '/assets/images/ic-extra/ic-extra.jpg', alt: 'Foto de um gradiente' },
+      ],
+    },
+  },
+  {
+    path: 'servicos-academicos',
+    component: ServicosAcademicosComponent,
+    data: {
+      background: [
+        {
+          src: '/assets/images/servicos-academicos/banner.jpg',
+          alt: 'Foto do campus da USP de São Carlos',
+        },
       ],
     },
   },
