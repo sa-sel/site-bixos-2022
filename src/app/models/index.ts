@@ -1,4 +1,5 @@
 export * from './alternating-layout.model'
+export * from './ic-extra.model'
 export * from './image-grid.model'
 export * from './image.model'
 export * from './modal.model'

@@ -30,15 +30,15 @@ export class SidebarComponent implements OnInit, OnDestroy {
     {
       title: 'Semana de Recepção',
       icon: 'fas fa-calendar', // far fa-calendar, fas fa-calendar-week
-      route: 'recepcao',
+      route: 'semana-de-recepcao',
       collapsed: true,
     },
-    {
-      title: 'Kit Bixo',
-      icon: 'fas fa-tshirt', // fas fa-gifts, fas fa-gift
-      route: 'kit-bixo',
-      collapsed: true,
-    },
+    // {
+    //   title: 'Kit Bixo',
+    //   icon: 'fas fa-tshirt', // fas fa-gifts, fas fa-gift
+    //   route: 'kit-bixo',
+    //   collapsed: true,
+    // },
     {
       title: 'Matrícula',
       icon: 'fas fa-passport',
@@ -84,7 +84,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
     {
       title: 'ICs e Extracurriculares',
       icon: 'fas fa-microscope', // fas fa-atom
-      route: 'ic-extras',
+      route: 'ics-extras',
       collapsed: true,
     },
     {

@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { MoradiasComponent } from './core/moradias/moradias.component'
-import { HomeComponent, SobreCursoComponent } from '@core'
+import {
+  HomeComponent,
+  IcExtraComponent,
+  SemanaDeRecepcaoComponent,
+  SobreCursoComponent,
+} from '@core'
+import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
-import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
+import { MoradiasComponent } from './core/moradias/moradias.component'
 
 const routes: Routes = [
   {
@@ -62,6 +67,27 @@ const routes: Routes = [
     component: BandejaoComponent,
     data: {
       background: [{ src: '/assets/images/bandejao/banner.jpg', alt: 'Foto do banejão' }],
+    },
+  },
+  {
+    path: 'semana-de-recepcao',
+    component: SemanaDeRecepcaoComponent,
+    data: {
+      background: [
+        {
+          src: '/assets/images/semana-de-recepcao/banner.png',
+          alt: 'Foto de uma gincana da semana de recepção',
+        },
+      ],
+    },
+  },
+  {
+    path: 'ics-extras',
+    component: IcExtraComponent,
+    data: {
+      background: [
+        { src: '/assets/images/ic-extra/ic-extra.jpg', alt: 'Foto de um gradiente' },
+      ],
     },
   },
   {
