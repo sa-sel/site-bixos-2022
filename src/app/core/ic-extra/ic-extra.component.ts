@@ -1,19 +1,12 @@
 import { Component } from '@angular/core'
-import { ExtracurricularGroupTypes, ExtracurricularGroupModel } from '@models'
+import { ExtracurricularGroupModel, ExtracurricularGroupTypes } from '@models'
 
 @Component({
   selector: 'app-ic-extra',
   templateUrl: './ic-extra.component.html',
 })
 export class IcExtraComponent {
-  r = 'Representatividade'
-  a = 'Artística'
-  s = 'Social'
-  e = 'Esportes'
-  t = 'Técnica'
-  n = 'Negócios'
-
-  extras: ExtracurricularGroupModel[] = [
+  extracurricularGroups: ExtracurricularGroupModel[] = [
     {
       name: 'Abuscar',
       categories: [ExtracurricularGroupTypes.Representative],
