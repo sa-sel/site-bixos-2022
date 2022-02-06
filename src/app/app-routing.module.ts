@@ -4,6 +4,7 @@ import {
   HomeComponent,
   CampusComponent,
   IcExtraComponent,
+  SemanaDeRecepcaoComponent,
   SobreCursoComponent,
 } from '@core'
 import { MoradiasComponent } from './core/moradias/moradias.component'
@@ -97,6 +98,18 @@ const routes: Routes = [
         {
           src: 'assets/images/campus/Bancada_Lab_Quím.png',
           alt: 'Bancada Laboratório de Química',
+        },
+      ],
+    },
+  },
+  {
+    path: 'semana-de-recepcao',
+    component: SemanaDeRecepcaoComponent,
+    data: {
+      background: [
+        {
+          src: '/assets/images/semana-de-recepcao/banner.png',
+          alt: 'Foto de uma gincana da semana de recepção',
         },
       ],
     },
