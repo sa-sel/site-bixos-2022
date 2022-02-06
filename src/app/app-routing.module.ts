@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import {
   HomeComponent,
+  SobreCursoComponent,
   CampusComponent,
 } from '@core'
+import { MoradiasComponent } from './core/moradias/moradias.component'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
+import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
+import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
 
 const routes: Routes = [
   {
@@ -19,6 +23,30 @@ const routes: Routes = [
         src: '/assets/images/logo/subtitle.svg',
         alt: 'Logo da SA-SEL',
       },
+    },
+  },
+  {
+    path: 'bibliotecas',
+    component: BibliotecasComponent,
+    data: {
+      background: [
+        {
+          src: '/assets/images/bibliotecas/banner.jpg',
+          alt: 'Foto da biblioteca da EESC, segundo andar',
+        },
+      ],
+    },
+  },
+  {
+    path: 'curso',
+    component: SobreCursoComponent,
+    data: {
+      background: [
+        {
+          src: '/assets/images/sobre-curso/banner.jpg',
+          alt: 'Foto do prédio da SEL, departamento da elétrica',
+        },
+      ],
     },
   },
   {
@@ -55,6 +83,25 @@ const routes: Routes = [
         { src: 'assets/images/campus/Bancada_Lab_Fís.png', alt: 'Bancada Laboratório de Física' },
         { src: 'assets/images/campus/Bancada_Lab_Quím.png', alt: 'Bancada Laboratório de Química' },
       ],
+    },
+  },
+  {
+    path: 'servicos-academicos',
+    component: ServicosAcademicosComponent,
+    data: {
+      background: [
+        {
+          src: '/assets/images/servicos-academicos/banner.jpg',
+          alt: 'Foto do campus da USP de São Carlos',
+        },
+      ],
+    },
+  },
+  {
+    path: 'moradias',
+    component: MoradiasComponent,
+    data: {
+      background: [{ src: '/assets/images/moradias/moradias.jpg', alt: 'Foto da USP' }],
     },
   },
   { path: '**', redirectTo: '/' },

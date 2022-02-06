@@ -1,0 +1,44 @@
+<app-title>Bibliotecas</app-title>
+
+<p>
+  Como aluno(a) da USP, você tem direito de acessar livremente qualquer biblioteca
+  independentemente do campus. Cada um dos 5 institutos no campus de São Carlos tem sua
+  própria biblioteca (além de uma presente no campus 2). E devido aos amplos acervos, os
+  materiais recomendados pelos professores geralmente possuem alta disponibilidade (<s
+    >exceto em semana de prova</s
+  >), assim, você não precisa se preocupar em comprar livros ou apostilas.
+</p>
+
+<app-image-grid [gridItems]="libraries"></app-image-grid>
+
+<p>
+  Na sua primeira visita a uma biblioteca da USP, você poderá fazer seu cadastro, te
+  permitindo acesso ao empréstimo de livros em qualquer unidade.<br /><br />Uma vez feito
+  um empréstimo, você tem o direito de ficar com o livro por 10 dias. Caso ninguém tenha
+  feito uma reserva no livro, você pode o renovar por mais 10 dias (online ou
+  presencialmente). Você pode renovar até 3 vezes, totalizando um total de 40 dias com o
+  livro.<br /><br />
+  Após esses 40 dias, você deve devolver o livro presencialmente na biblioteca de origem.
+  Lá é possível, no entanto, emprestá-lo novamente caso não haja ninguém na fila de
+  reserva.<br /><br />
+  A punição para o atraso na devolução de livros é a suspensão do direito de fazer novos
+  empréstimos. Para cada dia de atraso, por livro, significa um dia não podendo pegar
+  novos exemplares. Ou seja, atrasou 2 dias e tem 3 livros → 6 dias suspenso.
+</p>
+
+<figure>
+  <img
+    class="img-fluid w-70 w-md-60 w-lg-50 d-block m-auto"
+    src="assets/images/bibliotecas/acervo.png"
+    alt="acervo de exemplares icmc"
+  />
+  <figcaption>Acervo de exemplares, biblioteca ICMC</figcaption>
+</figure>
+
+<p>
+  Você pode pesquisar por livros no acervo, ver e renovar seus empréstimos, e solicitar
+  reserva de um livro indisponível no momento por meio de 2 plataformas.
+</p>
+<app-image-grid [gridItems]="searchOptions"></app-image-grid>
+
+<app-alternating-layout [contents]="textAndImageList"></app-alternating-layout>
