@@ -138,7 +138,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
           /* eslint-disable dot-notation */
           this.route = groups['route']
-          this.fragment = groups['fragment'].replace('#', '')
+          this.fragment = groups['fragment']?.replace('#', '')
           /* eslint-enable dot-notation */
 
           this.sidebar.hide()

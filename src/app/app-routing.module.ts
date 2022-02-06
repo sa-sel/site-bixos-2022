@@ -5,6 +5,7 @@ import { HomeComponent, SobreCursoComponent } from '@core'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
+import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
 
 const routes: Routes = [
   {
@@ -61,6 +62,18 @@ const routes: Routes = [
     component: BandejaoComponent,
     data: {
       background: [{ src: '/assets/images/bandejao/banner.jpg', alt: 'Foto do banejão' }],
+    },
+  },
+  {
+    path: 'servicos-academicos',
+    component: ServicosAcademicosComponent,
+    data: {
+      background: [
+        {
+          src: '/assets/images/servicos-academicos/banner.jpg',
+          alt: 'Foto do campus da USP de São Carlos',
+        },
+      ],
     },
   },
   {

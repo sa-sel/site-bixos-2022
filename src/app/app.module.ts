@@ -19,6 +19,7 @@ import {
   SocialMediaIconComponent,
   TitleComponent,
 } from '@shared'
+import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
 import { CarouselModule } from 'ngx-bootstrap/carousel'
 import { CollapseModule } from 'ngx-bootstrap/collapse'
 import { ModalModule } from 'ngx-bootstrap/modal'
@@ -36,28 +37,23 @@ import { MoradiasComponent } from './core/moradias/moradias.component'
     AlternatingLayoutComponent,
     AppComponent,
     BandejaoComponent,
-    BandejaoComponent,
     BannerComponent,
-    BannerRouterComponent,
     BannerRouterComponent,
     BibliotecasComponent,
     FooterComponent,
     GroupsPanelComponent,
     HomeComponent,
-    HomeComponent,
     ImageGridComponent,
     LogoComponent,
-    MatriculaComponent,
     MatriculaComponent,
     ModalComponent,
     MoradiasComponent,
     NavbarComponent,
     SanitizeHtmlPipe,
+    ServicosAcademicosComponent,
     SidebarComponent,
     SobreCursoComponent,
     SocialMediaIconComponent,
-    SocialMediaIconComponent,
-    TitleComponent,
     TitleComponent,
   ],
   imports: [
