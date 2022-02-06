@@ -8,7 +8,6 @@ import { MatriculaComponent } from './core/matricula/matricula.component'
 import { MoradiasComponent } from './core/moradias/moradias.component'
 import { SemanaDeRecepcaoComponent } from './core/semana-de-recepcao/semana-de-recepcao.component'
 
-
 const routes: Routes = [
   {
     path: '',
@@ -74,6 +73,7 @@ const routes: Routes = [
         {
           src: '/assets/images/semana-de-recepcao/banner.png',
           alt: 'Foto de uma gincana da semana de recepção',
+        },
       ],
     },
   },
