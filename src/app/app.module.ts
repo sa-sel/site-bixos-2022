@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import {
   BibliotecasComponent,
   FooterComponent,
+  IcExtraComponent,
   NavbarComponent,
   SobreCursoComponent,
 } from '@core'
@@ -15,6 +16,7 @@ import {
   SocialMediaIconComponent,
   TitleComponent,
 } from '@shared'
+import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
 import { CarouselModule } from 'ngx-bootstrap/carousel'
 import { ModalModule } from 'ngx-bootstrap/modal'
 import { TooltipModule } from 'ngx-bootstrap/tooltip'
@@ -25,7 +27,9 @@ import { BannerRouterComponent } from './core/banner-router/banner-router.compon
 import { HomeComponent } from './core/home/home.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
 import { ModalComponent } from './shared/modal/modal.component';
+import { MoradiasComponent } from './core/moradias/moradias.component'
 import { SemanaDeRecepcaoComponent } from './core/semana-de-recepcao/semana-de-recepcao.component'
+
 
 @NgModule({
   declarations: [
@@ -34,20 +38,23 @@ import { SemanaDeRecepcaoComponent } from './core/semana-de-recepcao/semana-de-r
     BandejaoComponent,
     BannerComponent,
     BannerRouterComponent,
+    BibliotecasComponent,
     FooterComponent,
     HomeComponent,
+    IcExtraComponent,
     ImageGridComponent,
     LogoComponent,
     MatriculaComponent,
     ModalComponent,
+    MoradiasComponent,
     NavbarComponent,
     SanitizeHtmlPipe,
+    SemanaDeRecepcaoComponent,
+    ServicosAcademicosComponent,
     SobreCursoComponent,
     SocialMediaIconComponent,
     TitleComponent,
-    HomeComponent,
-    BibliotecasComponent,
-    SemanaDeRecepcaoComponent,
+   
   ],
   imports: [
     AppRoutingModule,

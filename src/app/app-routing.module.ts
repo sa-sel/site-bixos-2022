@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { HomeComponent, SobreCursoComponent } from '@core'
+import { HomeComponent, IcExtraComponent, SobreCursoComponent } from '@core'
+import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
+import { MoradiasComponent } from './core/moradias/moradias.component'
 import { SemanaDeRecepcaoComponent } from './core/semana-de-recepcao/semana-de-recepcao.component'
+
 
 const routes: Routes = [
   {
@@ -71,8 +74,35 @@ const routes: Routes = [
         {
           src: '/assets/images/semana-de-recepcao/banner.png',
           alt: 'Foto de uma gincana da semana de recepção',
+      ],
+    },
+  },
+  {
+    path: 'ic-extra',
+    component: IcExtraComponent,
+    data: {
+      background: [
+        { src: '/assets/images/ic-extra/ic-extra.jpg', alt: 'Foto de um gradiente' },
+      ],
+    },
+  },
+  {
+    path: 'servicos-academicos',
+    component: ServicosAcademicosComponent,
+    data: {
+      background: [
+        {
+          src: '/assets/images/servicos-academicos/banner.jpg',
+          alt: 'Foto do campus da USP de São Carlos',
         },
       ],
+    },
+  },
+  {
+    path: 'moradias',
+    component: MoradiasComponent,
+    data: {
+      background: [{ src: '/assets/images/moradias/moradias.jpg', alt: 'Foto da USP' }],
     },
   },
   { path: '**', redirectTo: '/' },
