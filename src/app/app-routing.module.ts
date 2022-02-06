@@ -1,10 +1,6 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import {
-  HomeComponent,
-  SobreCursoComponent,
-  CampusComponent,
-} from '@core'
+import { HomeComponent, SobreCursoComponent, CampusComponent } from '@core'
 import { MoradiasComponent } from './core/moradias/moradias.component'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
@@ -75,13 +71,28 @@ const routes: Routes = [
       background: [
         { src: 'assets/images/campus/banner.jpg', alt: 'Evento no campus' },
         { src: 'assets/images/campus/Prédio_E1.png', alt: 'Prédio E1' },
-        { src: 'assets/images/campus/Prédio_Eng_Elétr_Comp.png', alt: 'Prédio Eng. Elétrica e Comp' },
-        { src: 'assets/images/campus/Entrada_Arquitetura.png', alt: 'Entrada Arquitetura' },
+        {
+          src: 'assets/images/campus/Prédio_Eng_Elétr_Comp.png',
+          alt: 'Prédio Eng. Elétrica e Comp',
+        },
+        {
+          src: 'assets/images/campus/Entrada_Arquitetura.png',
+          alt: 'Entrada Arquitetura',
+        },
         { src: 'assets/images/campus/Sala_Bloco_D.png', alt: 'Sala Bloco D' },
         { src: 'assets/images/campus/Praça_Campus_2.png', alt: 'Praça Campus 2' },
-        { src: 'assets/images/campus/Ponto_Ônibus_Campus_2.png', alt: 'Ponto de Ônibus Campus 2' },
-        { src: 'assets/images/campus/Bancada_Lab_Fís.png', alt: 'Bancada Laboratório de Física' },
-        { src: 'assets/images/campus/Bancada_Lab_Quím.png', alt: 'Bancada Laboratório de Química' },
+        {
+          src: 'assets/images/campus/Ponto_Ônibus_Campus_2.png',
+          alt: 'Ponto de Ônibus Campus 2',
+        },
+        {
+          src: 'assets/images/campus/Bancada_Lab_Fís.png',
+          alt: 'Bancada Laboratório de Física',
+        },
+        {
+          src: 'assets/images/campus/Bancada_Lab_Quím.png',
+          alt: 'Bancada Laboratório de Química',
+        },
       ],
     },
   },
