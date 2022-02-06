@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import {
   BibliotecasComponent,
   FooterComponent,
+  IcExtraComponent,
   NavbarComponent,
   SobreCursoComponent,
   CampusComponent,
@@ -16,17 +17,17 @@ import {
   SocialMediaIconComponent,
   TitleComponent,
 } from '@shared'
+import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
 import { CarouselModule } from 'ngx-bootstrap/carousel'
 import { ModalModule } from 'ngx-bootstrap/modal'
 import { TooltipModule } from 'ngx-bootstrap/tooltip'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { MoradiasComponent } from './core/moradias/moradias.component'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BannerRouterComponent } from './core/banner-router/banner-router.component'
 import { HomeComponent } from './core/home/home.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
-import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
+import { MoradiasComponent } from './core/moradias/moradias.component'
 import { ModalComponent } from './shared/modal/modal.component'
 
 @NgModule({
@@ -36,25 +37,22 @@ import { ModalComponent } from './shared/modal/modal.component'
     BandejaoComponent,
     BannerComponent,
     BannerRouterComponent,
+    BibliotecasComponent,
+    CampusComponent,
     FooterComponent,
     HomeComponent,
+    IcExtraComponent,
     ImageGridComponent,
     LogoComponent,
     MatriculaComponent,
     ModalComponent,
+    MoradiasComponent,
     NavbarComponent,
     SanitizeHtmlPipe,
+    ServicosAcademicosComponent,
     SobreCursoComponent,
     SocialMediaIconComponent,
     TitleComponent,
-    HomeComponent,
-    MoradiasComponent,
-    BannerRouterComponent,
-    MatriculaComponent,
-    BandejaoComponent,
-    CampusComponent,
-    ServicosAcademicosComponent,
-    BibliotecasComponent,
   ],
   imports: [
     AppRoutingModule,

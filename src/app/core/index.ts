@@ -1,4 +1,5 @@
 export * from './banner-router/banner-router.component'
+export * from './ic-extra/ic-extra.component'
 export * from './bibliotecas/bibliotecas.component'
 export * from './footer/footer.component'
 export * from './home/home.component'

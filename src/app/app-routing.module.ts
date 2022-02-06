@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { HomeComponent, SobreCursoComponent, CampusComponent } from '@core'
+import {
+  HomeComponent,
+  CampusComponent,
+  IcExtraComponent,
+  SobreCursoComponent,
+} from '@core'
 import { MoradiasComponent } from './core/moradias/moradias.component'
+import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
-import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
 
 const routes: Routes = [
   {
@@ -93,6 +98,15 @@ const routes: Routes = [
           src: 'assets/images/campus/Bancada_Lab_Quím.png',
           alt: 'Bancada Laboratório de Química',
         },
+      ],
+    },
+  },
+  {
+    path: 'ic-extra',
+    component: IcExtraComponent,
+    data: {
+      background: [
+        { src: '/assets/images/ic-extra/ic-extra.jpg', alt: 'Foto de um gradiente' },
       ],
     },
   },
