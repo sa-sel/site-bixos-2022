@@ -6,7 +6,7 @@ import { ImageGridItemModel } from '@models'
   templateUrl: './preparacao-estudos.component.html',
 })
 export class PreparacaoEstudosComponent {
-  taskManager: ImageGridItemModel[] = [
+  taskManagerLogos: ImageGridItemModel[] = [
     {
       image: {
         src: '/assets/images/preparacao/Todoist.png',
@@ -32,7 +32,8 @@ export class PreparacaoEstudosComponent {
       url: 'https://pomofocus.io/',
     },
   ]
-  noteandplanning: ImageGridItemModel[] = [
+
+  planningLogos: ImageGridItemModel[] = [
     {
       image: {
         src: '/assets/images/preparacao/Notion.png',
@@ -66,7 +67,8 @@ export class PreparacaoEstudosComponent {
       url: 'https://bcc.ime.usp.br/matrusp/',
     },
   ]
-  notes: ImageGridItemModel[] = [
+
+  notetakingLogos: ImageGridItemModel[] = [
     {
       image: {
         src: '/assets/images/preparacao/roam.png',
@@ -100,7 +102,8 @@ export class PreparacaoEstudosComponent {
       url: 'https://evernote.com/',
     },
   ]
-  references: ImageGridItemModel[] = [
+
+  otherToolsLogos: ImageGridItemModel[] = [
     {
       image: {
         src: '/assets/images/preparacao/eesc.jpg',

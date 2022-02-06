@@ -5,6 +5,7 @@ import {
   FooterComponent,
   NavbarComponent,
   SobreCursoComponent,
+  PreparacaoEstudosComponent,
 } from '@core'
 import { SanitizeHtmlPipe } from '@pipes'
 import {
@@ -24,8 +25,6 @@ import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BannerRouterComponent } from './core/banner-router/banner-router.component'
 import { HomeComponent } from './core/home/home.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
-import { BandejaoComponent } from './core/bandejao/bandejao.component'
-import { PreparacaoEstudosComponent } from './core/preparacao-estudos/preparacao-estudos.component'
 import { ModalComponent } from './shared/modal/modal.component'
 
 @NgModule({

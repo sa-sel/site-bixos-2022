@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { HomeComponent, SobreCursoComponent } from '@core'
+import { HomeComponent, SobreCursoComponent, PreparacaoEstudosComponent } from '@core'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
-import { PreparacaoEstudosComponent } from 'core/preparacao-estudos/preparacao-estudos.component'
 
 const routes: Routes = [
   {
