@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { HomeComponent } from '@core'
-import { CampusComponent } from 'core/campus/campus.component'
+import {
+  HomeComponent,
+  CampusComponent,
+} from '@core'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
 
