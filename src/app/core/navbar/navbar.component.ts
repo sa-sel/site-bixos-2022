@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core'
 import { Router } from '@angular/router'
+import { SidebarService } from '@services'
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   @ViewChild('navbar') navbarRef!: ElementRef
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private sidebarService: SidebarService) {}
 
   ngOnInit(): void {
     if (this.isBelowBanner) {
@@ -30,9 +31,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.unsetSticky()
   }
 
-  // TODO
-  openSidebar(): void {
-    console.log('open sidebar')
+  openSidebar() {
+    this.sidebarService.open()
   }
 
   goToHomepage(): void {
