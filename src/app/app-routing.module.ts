@@ -4,6 +4,7 @@ import { HomeComponent, SobreCursoComponent } from '@core'
 import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
+import { SemanaDeRecepcaoComponent } from './core/semana-de-recepcao/semana-de-recepcao.component'
 
 const routes: Routes = [
   {
@@ -60,6 +61,18 @@ const routes: Routes = [
     component: BandejaoComponent,
     data: {
       background: [{ src: '/assets/images/bandejao/banner.jpg', alt: 'Foto do banejão' }],
+    },
+  },
+  {
+    path: 'semana-de-recepcao',
+    component: SemanaDeRecepcaoComponent,
+    data: {
+      background: [
+        {
+          src: '/assets/images/semana-de-recepcao/banner.png',
+          alt: 'Foto de uma gincana da semana de recepção',
+        },
+      ],
     },
   },
   { path: '**', redirectTo: '/' },

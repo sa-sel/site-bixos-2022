@@ -24,7 +24,8 @@ import { BandejaoComponent } from './core/bandejao/bandejao.component'
 import { BannerRouterComponent } from './core/banner-router/banner-router.component'
 import { HomeComponent } from './core/home/home.component'
 import { MatriculaComponent } from './core/matricula/matricula.component'
-import { ModalComponent } from './shared/modal/modal.component'
+import { ModalComponent } from './shared/modal/modal.component';
+import { SemanaDeRecepcaoComponent } from './core/semana-de-recepcao/semana-de-recepcao.component'
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ModalComponent } from './shared/modal/modal.component'
     TitleComponent,
     HomeComponent,
     BibliotecasComponent,
+    SemanaDeRecepcaoComponent,
   ],
   imports: [
     AppRoutingModule,
