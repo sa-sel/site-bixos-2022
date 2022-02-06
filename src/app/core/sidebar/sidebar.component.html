@@ -45,7 +45,8 @@
           <ul class="list-unstyled px-4">
             <li *ngFor="let sub of item.subitems">
               <a
-                class="text-reset text-decoration-none"
+                [class.text-decoration-none]="fragment !== sub.id"
+                class="text-reset"
                 [routerLink]="item.route"
                 [fragment]="sub.id"
                 >{{ sub.title }}</a

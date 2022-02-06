@@ -12,6 +12,7 @@ import { Subscription } from 'rxjs'
 })
 export class SidebarComponent implements OnInit, OnDestroy {
   route = ''
+  fragment = ''
   startsOpen = this.sidebarService.isOpen()
   subscriptions: Subscription[] = []
   sidebar!: bootstrap.Offcanvas
@@ -132,7 +133,14 @@ export class SidebarComponent implements OnInit, OnDestroy {
     this.subscriptions.push(
       this.router.events.subscribe(e => {
         if (e instanceof NavigationEnd) {
-          this.route = e.urlAfterRedirects.replace('/', '')
+          const regexp = /\/(?<route>\w*)(?<fragment>#.+)?/
+          const groups = regexp.exec(e.urlAfterRedirects)?.groups ?? {}
+
+          /* eslint-disable dot-notation */
+          this.route = groups['route']
+          this.fragment = groups['fragment'].replace('#', '')
+          /* eslint-enable dot-notation */
+
           this.sidebar.hide()
         }
       })

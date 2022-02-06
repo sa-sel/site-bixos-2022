@@ -1,5 +1,4 @@
 @import 'src/styles';
-/* @import 'src/colors'; */
 
 .sidebar-hover {
   &:hover {
@@ -40,7 +39,8 @@
     color: inherit !important;
   }
 
-  .expanded {
+  .expanded,
+  .expanded * {
     transition: 0.25s;
     background-color: $primary;
     color: $light !important;
