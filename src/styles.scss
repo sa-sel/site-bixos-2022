@@ -74,6 +74,15 @@ a:active {
   color: $dark-blue !important;
 }
 
+img {
+  @extend .img-fluid;
+}
+
+figure img {
+  display: block;
+  margin: auto;
+}
+
 figcaption {
   @extend .text-muted;
   @extend .small;
@@ -91,8 +100,6 @@ figcaption {
   height: 100%;
   border-left: 1px solid $gray-500;
 }
-
-/*Use "user-select-none" class instead of ".no-select"*/
 
 .text-justify {
   text-align: justify !important;
