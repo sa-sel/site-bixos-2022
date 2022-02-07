@@ -1,4 +1,4 @@
-import { ImageModel } from '@models'
+import { ImageModel } from './image.model'
 
 export interface ModalModel {
   image?: ImageModel
