@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import {
+  BandejaoComponent,
+  BibliotecasComponent,
   CampusComponent,
   HomeComponent,
   IcExtraComponent,
+  MatriculaComponent,
+  MoradiasComponent,
   PreparacaoEstudosComponent,
-  SemanaDeRecepcaoComponent,
-  SobreCursoComponent,
   ProjetoAmpereComponent,
+  SemanaDeRecepcaoComponent,
+  ServicosAcademicosComponent,
+  SobreCursoComponent,
 } from '@core'
-import { ServicosAcademicosComponent } from 'core/servicos-academicos/servicos-academicos.component'
-import { BandejaoComponent } from './core/bandejao/bandejao.component'
-import { BibliotecasComponent } from './core/bibliotecas/bibliotecas.component'
-import { MatriculaComponent } from './core/matricula/matricula.component'
-import { MoradiasComponent } from './core/moradias/moradias.component'
 
 const routes: Routes = [
   {
