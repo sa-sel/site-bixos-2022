@@ -1,4 +1,4 @@
-import { ImageModel } from './image.model'
+import { ImageModel } from '@models'
 
 export interface AlternatingLayoutModel {
   image?: ImageModel

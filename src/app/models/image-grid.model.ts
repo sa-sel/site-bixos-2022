@@ -1,5 +1,4 @@
-import { ImageModel } from './image.model'
-import { ModalModel } from './modal.model'
+import { ImageModel, ModalModel } from '@models'
 
 export interface ImageGridItemModel {
   image: ImageModel
