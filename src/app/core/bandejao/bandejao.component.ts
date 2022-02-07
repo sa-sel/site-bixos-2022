@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { AlternatingLayoutModel } from './../../models/alternating-layout.model'
+import { AlternatingLayoutModel } from '@models'
 
 @Component({
   selector: 'app-bandejao',
