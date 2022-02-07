@@ -14,8 +14,9 @@ export class GroupsPanelComponent implements OnInit {
   }
 
   groups: SocialMediaModel[] = [
-    { name: SocialMedia.Facebook, url: 'https://www.facebook.com/sasel.usp' },
-    { name: SocialMedia.WhatsApp, url: '+55 (71) 8155-6248' },
-    { name: SocialMedia.Discord, url: 'https://github.com/sa-sel' },
+    {
+      name: SocialMedia.Facebook,
+      url: 'https://www.facebook.com/groups/grupodosbixos2022/',
+    },
   ]
 }
