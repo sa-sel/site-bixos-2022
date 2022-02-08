@@ -3,7 +3,7 @@
   >Bem vindos ao curso de Engenharia Elétrica da USP - São Carlos!!</app-title
 >
 
-<section class="text-justify">
+<section class="text-justify m-auto">
   <p>
     A <abbr title="Secretaria Acadêmica da Engenharia Elétrica"><b>SA-SEL</b></abbr> e a
     <b>comissão de recepção</b> dos bixos deseja boas-vindas a você, caloura ou calouro,
@@ -15,18 +15,13 @@
     curso, a vida universitária e a sua recepção. Sinta-se à vontade para explorar esse
     conteúdo!
   </p>
-</section>
-
-<section>
   <p>
     Abaixo está o link dos grupos dos bixos que estamos usando para conversar com vocês.
   </p>
   <div>
     <app-groups-panel color="secondary" [size]="30"></app-groups-panel>
   </div>
-</section>
 
-<section>
   <p>E aqui está a localização da USP - São Carlos, para você não se perder.</p>
   <div class="ratio ratio-16x9 w-100 w-lg-60 m-auto">
     <iframe
@@ -45,20 +40,19 @@
     Você pode estar assustado pela quantidade de informações, mas calma! Vamos te ajudar a
     como navegar por esse site No topo superior, você vai encontrar um icone como esse:
   </p>
-
-  <button
-    (click)="sidebarService.open()"
-    class="navbar-light navbar-toggler"
-    type="button"
-  >
-    <span class="navbar-toggler-icon mb-2"></span>
-  </button>
+  <div class="mb-3">
+    <button
+      (click)="sidebarService.open()"
+      class="navbar-light navbar-toggler"
+      type="button"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
   <p>
     Ele vai abrir a barra de navegação ao lado. Nela, você pode ver todos conteúdos do
-    site. Clicando em algum contéudo, você será redirecionado para a página escolhida,
-    caso queira saber sobre outro assunto, basta clicar novamente no icone e ir para a
-    próxima página. Mas nao se preocupe, caso ainda esteja perdido, não hesite e falar com
-    qualquer um de nós.
+    site e ao clicar em algum, será redirecionado para a página escolhida. Caso queira
+    saber sobre outro assunto, basta clicar novamente no ícone e ir para a próxima página.
   </p>
 </section>
 
@@ -312,59 +306,6 @@
 </section>
 
 <section>
-  <div>
-    <app-title>Patrocionadores</app-title>
-    <app-image-grid [gridItems]="sponsorsPhotos"></app-image-grid>
-  </div>
+  <app-title>Patrocionadores</app-title>
+  <app-image-grid [gridItems]="sponsorsPhotos"></app-image-grid>
 </section>
-<!--
-<app-image-grid [gridItems]="[image1, image2, image3]"></app-image-grid>
-<app-title>{{ openModal }}</app-title>
-<button (click)="toggleModal()">testeste</button>
-<app-alternating-layout [contents]="textAndImageList"> </app-alternating-layout>
-
-
-
-<app-modal
-  [(isOpen)]="openModal"
-  title="Esse é um modal"
-  [text]="'Oi! teste'"
-  [image]="{ src: '/assets/images/logo/main.svg', alt: 'test', caption: 'Teste' }"
-  url="https://google.com"
->
-  <div class="text-justify">
-    <br />
-    <app-title>Content Projection</app-title>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-    has been the industrys standard dummy text ever since the 1500s, when an unknown
-    printer took a galley of type and scrambled it to make a type specimen book.
-    <br /><br />
-    It has survived not only five centuries, but also the leap into electronic
-    typesetting, remaining essentially unchanged.
-    <br /><br />
-    It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-    Ipsum passages, and more recently with desktop publishing software like Aldus
-    PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the
-    printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy
-    text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-    it to make a type specimen book.
-    <br /><br />
-    It has survived not only five centuries, but also the leap into electronic
-    typesetting, remaining essentially unchanged.
-    <br /><br />
-    It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-    Ipsum passages, and more recently with desktop publishing software like Aldus
-    PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the
-    printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy
-    text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-    it to make a type specimen book.
-    <br /><br />
-    It has survived not only five centuries, but also the leap into electronic
-    typesetting, remaining essentially unchanged.
-    <br /><br />
-    It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-    Ipsum passages, and more recently with desktop publishing software like Aldus
-    PageMaker including versions of Lorem Ipsum
-  </div>
-</app-modal>
--->
