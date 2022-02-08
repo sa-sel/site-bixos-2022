@@ -176,6 +176,20 @@ export class SidebarComponent implements OnInit, OnDestroy {
       icon: 'fas fa-house-user',
       route: 'moradias',
       collapsed: true,
+      subitems: [
+        {
+          title: 'Alojamento Estudantil no Campus',
+          id: 'college-home',
+        },
+        {
+          title: 'Grupos no Facebook',
+          id: 'facebook-groups',
+        },
+        {
+          title: 'Imobiliárias de São Carlos',
+          id: 'real-estate',
+        },
+      ],
     },
   ]
 
