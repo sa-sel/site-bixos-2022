@@ -108,6 +108,32 @@ export class SidebarComponent implements OnInit, OnDestroy {
       icon: 'fas fa-user-graduate',
       route: 'servicos-academicos',
       collapsed: true,
+      subitems: [
+        {
+          title: 'Portal de Serviços USP',
+          id: 'services-portal',
+        },
+        {
+          title: 'e-Disciplinas (Moodle)',
+          id: 'moodle',
+        },
+        {
+          title: 'Ferramentas Google',
+          id: 'google-tools',
+        },
+        {
+          title: 'Eduroam (Wi-Fi)',
+          id: 'eduroam',
+        },
+        {
+          title: 'MatrUSP',
+          id: 'matrusp',
+        },
+        {
+          title: 'Outros mimos',
+          id: 'gifts',
+        },
+      ],
     },
     {
       title: 'ICs e Extracurriculares',
