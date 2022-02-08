@@ -52,6 +52,10 @@ export class SidebarComponent implements OnInit, OnDestroy {
       collapsed: true,
       subitems: [
         {
+          title: 'Cronograma',
+          id: 'cronograma',
+        },
+        {
           title: 'Apadrinhamento',
           id: 'apadrinhamento',
         },
@@ -80,10 +84,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
         {
           title: 'Matrícula',
           id: 'matricula',
-        },
-        {
-          title: 'Local de matrícula',
-          id: 'locais',
         },
       ],
     },
@@ -161,20 +161,20 @@ export class SidebarComponent implements OnInit, OnDestroy {
       subitems: [
         {
           title: 'Extracurriculares Técnicas',
-          id: 'extras-tecnicas',
+          id: 'extracurriculares-tecnicas',
         },
         {
           title:
             'Centro Acadêmico, Secretarias Acadêmicas, Coletivos e Grupos Religiosos',
-          id: 'centro-academico-etc',
+          id: 'centro-academico',
         },
         {
           title: 'Iniciações Científicas',
-          id: 'ics',
+          id: 'iniciacao-cientifica',
         },
         {
           title: 'Grupos Extracurriculares',
-          id: 'extras',
+          id: 'extracurriculares',
         },
       ],
     },
@@ -202,7 +202,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
         },
         {
           title: 'Grupos no Facebook',
-          id: 'grupos-no-facebook',
+          id: 'grupos-facebook',
         },
         {
           title: 'Imobiliárias de São Carlos',
