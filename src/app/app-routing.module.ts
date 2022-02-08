@@ -1,3 +1,4 @@
+import { OuvidoriaComponent } from './core/ouvidoria/ouvidoria.component'
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import {
@@ -167,6 +168,13 @@ const routes: Routes = [
     component: MoradiasComponent,
     data: {
       background: [{ src: '/assets/images/moradias/moradias.jpg', alt: 'Foto da USP' }],
+    },
+  },
+  {
+    path: 'ouvidoria',
+    component: OuvidoriaComponent,
+    data: {
+      background: [{ src: '/assets/images/ouvidoria/', alt: 'Ouvidoria' }],
     },
   },
   { path: '**', redirectTo: '/' },

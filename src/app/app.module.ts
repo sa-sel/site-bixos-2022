@@ -19,6 +19,7 @@ import {
   SidebarComponent,
   SobreCursoComponent,
   ProjetoAmpereComponent,
+  OuvidoriaComponent,
 } from '@core'
 import { SanitizeHtmlPipe } from '@pipes'
 import {
@@ -67,6 +68,7 @@ import { AppComponent } from './app.component'
     HomeComponent,
     BibliotecasComponent,
     ProjetoAmpereComponent,
+    OuvidoriaComponent,
   ],
   imports: [
     AppRoutingModule,
