@@ -179,7 +179,7 @@ const routes: Routes = [
       onSameUrlNavigation: 'reload',
       paramsInheritanceStrategy: 'always',
       scrollPositionRestoration: 'enabled',
-      scrollOffset: [0,75],
+      scrollOffset: [0, 75],
     }),
   ],
   exports: [RouterModule],
