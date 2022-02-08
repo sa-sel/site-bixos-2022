@@ -1,4 +1,3 @@
-import { OuvidoriaComponent } from './core/ouvidoria/ouvidoria.component'
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import {
@@ -14,6 +13,7 @@ import {
   SemanaDeRecepcaoComponent,
   ServicosAcademicosComponent,
   SobreCursoComponent,
+  OuvidoriaComponent,
 } from '@core'
 
 const routes: Routes = [
