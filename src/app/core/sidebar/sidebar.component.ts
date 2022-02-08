@@ -80,6 +80,28 @@ export class SidebarComponent implements OnInit, OnDestroy {
       icon: 'fab fa-youtube', // fab fa-youtube-square, fas fa-pen, fas fa-book
       route: 'projeto-ampere',
       collapsed: true,
+      subitems: [
+        {
+          title: 'Pré-Cálculo',
+          id: 'pre-calculus',
+        },
+        {
+          title: 'Geometria Analítica',
+          id: 'analytic-geometry',
+        },
+        {
+          title: 'Programação',
+          id: 'programmation',
+        },
+        {
+          title: 'Física I',
+          id: 'physics',
+        },
+        {
+          title: 'Cálculo I',
+          id: 'calculus',
+        },
+      ],
     },
     {
       title: 'Serviços Acadêmicos',
