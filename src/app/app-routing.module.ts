@@ -21,7 +21,7 @@ const routes: Routes = [
     component: HomeComponent,
     data: {
       background: [
-        { src: '/assets/images/banner.jpg', alt: 'Membros da SA-SEL em 2019' },
+        { src: '/assets/images/home/banner.jpg', alt: 'Membros da SA-SEL em 2019' },
       ],
       logo: {
         src: '/assets/images/logo/subtitle.svg',

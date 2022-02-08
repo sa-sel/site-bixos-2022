@@ -108,3 +108,15 @@ figcaption {
 .cursor-pointer {
   cursor: pointer !important;
 }
+
+details {
+  summary {
+    font-weight: 500;
+  }
+
+  summary + * {
+    @extend .mt-2;
+    @extend .pt-2;
+    border-top: solid 1px $gray-500;
+  }
+}
