@@ -146,7 +146,8 @@ export class SidebarComponent implements OnInit, OnDestroy {
           id: 'technical-extra',
         },
         {
-          title: 'Centro Acadêmico, Secretarias Acadêmicas, Coletivos e Grupos Religiosos',
+          title:
+            'Centro Acadêmico, Secretarias Acadêmicas, Coletivos e Grupos Religiosos',
           id: 'academic-center',
         },
         {
