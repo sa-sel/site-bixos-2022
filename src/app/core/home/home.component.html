@@ -19,37 +19,15 @@
 
 <section>
   <p>
-    Abaixo está o link dos grupos dos bixos que estamos usando para conversar com vocês:
+    Abaixo está o link dos grupos dos bixos que estamos usando para conversar com vocês.
   </p>
-  <div class="d-flex flex-column align-items-center gap-2 {{ color }} pb-2">
-    <strong style="font-size: {{ size - 5 }}px"> GRUPOS DOS BIXOS </strong>
-
-    <div class="d-flex justify-content-center align-items-center m-auto gap-5">
-      <div class="w-auto" *ngFor="let group of groups">
-        <app-social-media-icon
-          [network]="group"
-          size="{{ size }}pt"
-          [color]="color"
-        ></app-social-media-icon>
-      </div>
-    </div>
+  <div>
+    <app-groups-panel color="secondary" [size]="30"></app-groups-panel>
   </div>
 </section>
 
-<section class="text-justify">
-  <p>
-    Você pode estar perdido, pela quantidade de informações recebida, como navegar por
-    esse site, mas calma, estamos aqui para te ajudar. No topo superior, você vai
-    encontrar um icone como esse: COLOCAR O ICONE DA NAVEBAR, 
-    
-    ele vai abrir a barra de
-    navegação ao lado. Nela, você pode navegar por todos conteúdos do site. Clicando em
-    algum contéudo, você será redirecionado para a página escolhida, caso queira saber
-    sobre outro assunto, basta clicar novamente no icone e ir para a próxima página. Mas
-    nao se preocupe, caso ainda esteja perdido, não hesite e falar com qualquer um de nós.
-  </p>
-</section>
 <section>
+  <p>E aqui está a localização da USP - São Carlos, para você não se perder.</p>
   <div class="ratio ratio-16x9 w-100 w-lg-60 m-auto">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14796.89359685369!2d-47.8985742!3d-22.0027496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9fd71af8a6c23c26!2sUSP%20-%20Universidade%20de%20S%C3%A3o%20Paulo%20Campus%20de%20S%C3%A3o%20Carlos!5e0!3m2!1sen!2sbr!4v1644184969122!5m2!1sen!2sbr"
@@ -62,7 +40,29 @@
   </div>
 </section>
 
-<section class="d-flex flex-column gap-4 text-justify">
+<section class="text-justify mt-4">
+  <p>
+    Você pode estar assustado pela quantidade de informações, mas calma! Vamos te ajudar a
+    como navegar por esse site No topo superior, você vai encontrar um icone como esse:
+  </p>
+
+  <button
+    (click)="sidebarService.open()"
+    class="navbar-light navbar-toggler"
+    type="button"
+  >
+    <span class="navbar-toggler-icon mb-2"></span>
+  </button>
+  <p>
+    Ele vai abrir a barra de navegação ao lado. Nela, você pode ver todos conteúdos do
+    site. Clicando em algum contéudo, você será redirecionado para a página escolhida,
+    caso queira saber sobre outro assunto, basta clicar novamente no icone e ir para a
+    próxima página. Mas nao se preocupe, caso ainda esteja perdido, não hesite e falar com
+    qualquer um de nós.
+  </p>
+</section>
+
+<section class="d-flex flex-column gap-1 mb-2 text-justify">
   <app-title [subtitle]="true">Perguntas Frequentes (FAQ)</app-title>
   <div>
     <details>
