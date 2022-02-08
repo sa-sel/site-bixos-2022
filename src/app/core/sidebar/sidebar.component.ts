@@ -48,7 +48,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
     {
       title: 'Semana de Recepção',
       icon: 'fas fa-calendar', // far fa-calendar, fas fa-calendar-week
-      route: 'semana-de-recepcao',
+      route: 'semana-recepcao',
       collapsed: true,
       subitems: [
         {
@@ -82,8 +82,8 @@ export class SidebarComponent implements OnInit, OnDestroy {
           id: 'datas',
         },
         {
-          title: 'Matrícula',
-          id: 'matricula',
+          title: 'Confirmação de matrícula',
+          id: 'confirmacao-matricula',
         },
       ],
     },
@@ -129,7 +129,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
       subitems: [
         {
           title: 'Portal de Serviços USP',
-          id: 'portal-de-servicos',
+          id: 'portal-servicos',
         },
         {
           title: 'e-Disciplinas (Moodle)',
