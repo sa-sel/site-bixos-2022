@@ -140,6 +140,24 @@ export class SidebarComponent implements OnInit, OnDestroy {
       icon: 'fas fa-microscope', // fas fa-atom
       route: 'ics-extras',
       collapsed: true,
+      subitems: [
+        {
+          title: 'Extracurriculares Técnicas',
+          id: 'technical-extra',
+        },
+        {
+          title: 'Centro Acadêmico, Secretarias Acadêmicas, Coletivos e Grupos Religiosos',
+          id: 'academic-center',
+        },
+        {
+          title: 'Iniciações Científicas',
+          id: 'scientific-initiation',
+        },
+        {
+          title: 'Grupos Extracurriculares',
+          id: 'extra',
+        },
+      ],
     },
     {
       title: 'Bandejão',
