@@ -1,17 +1,16 @@
-import { Component, Input } from '@angular/core'
-import { ImageGridItemModel, SocialMedia, SocialMediaModel } from '@models'
+import { Component } from '@angular/core'
+import { ImageGridItemModel } from '@models'
 import { SidebarService } from '@services'
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  sponsorsPhotos: ImageGridItemModel[] = [
+  sponsorsImages: ImageGridItemModel[] = [
     {
       image: {
-        src: '/assets/images/home/novo/abias.svg',
+        src: '/assets/images/home/abias.svg',
         alt: 'abias',
         caption: 'Abias Imóveis',
       },
@@ -19,7 +18,7 @@ export class HomeComponent {
     },
     {
       image: {
-        src: '/assets/images/home/novo/ca-and-ma.svg',
+        src: '/assets/images/home/ca-and-ma.svg',
         alt: 'Ca and Ma',
         caption: 'Ca and Ma',
       },
@@ -27,7 +26,7 @@ export class HomeComponent {
     },
     {
       image: {
-        src: '/assets/images/home/novo/cicbeu.svg',
+        src: '/assets/images/home/cicbeu.svg',
         alt: 'CICBEU',
         caption: 'CICBEU',
       },
