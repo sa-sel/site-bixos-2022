@@ -8,7 +8,7 @@ import {
   TemplateRef,
   ViewChild,
 } from '@angular/core'
-import { ImageModel } from 'models/image.model'
+import { ImageModel } from '@models'
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal'
 
 @Component({
