@@ -35,7 +35,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
       subitems: [
         {
           title: 'Apadrinhamento',
-          id: 'sponsorship',
+          id: 'apadrinhamento',
         },
       ],
     },
@@ -53,19 +53,19 @@ export class SidebarComponent implements OnInit, OnDestroy {
       subitems: [
         {
           title: 'Fluxograma',
-          id: 'flowchart',
+          id: 'fluxograma',
         },
         {
           title: 'Datas das chamadas',
-          id: 'dates',
+          id: 'datas',
         },
         {
           title: 'Matrícula',
-          id: 'enrollment',
+          id: 'matricula',
         },
         {
           title: 'Local de matrícula',
-          id: 'places',
+          id: 'locais',
         },
       ],
     },
@@ -83,23 +83,23 @@ export class SidebarComponent implements OnInit, OnDestroy {
       subitems: [
         {
           title: 'Pré-Cálculo',
-          id: 'pre-calculus',
+          id: 'pre-calculo',
         },
         {
           title: 'Geometria Analítica',
-          id: 'analytic-geometry',
+          id: 'geometria-analitica',
         },
         {
           title: 'Programação',
-          id: 'programmation',
+          id: 'programacao',
         },
         {
           title: 'Física I',
-          id: 'physics',
+          id: 'fisica1',
         },
         {
           title: 'Cálculo I',
-          id: 'calculus',
+          id: 'calculo1',
         },
       ],
     },
@@ -111,7 +111,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
       subitems: [
         {
           title: 'Portal de Serviços USP',
-          id: 'services-portal',
+          id: 'portal-de-servicos',
         },
         {
           title: 'e-Disciplinas (Moodle)',
@@ -119,7 +119,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
         },
         {
           title: 'Ferramentas Google',
-          id: 'google-tools',
+          id: 'ferramentas-google',
         },
         {
           title: 'Eduroam (Wi-Fi)',
@@ -131,7 +131,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
         },
         {
           title: 'Outros mimos',
-          id: 'gifts',
+          id: 'mimos',
         },
       ],
     },
@@ -143,20 +143,20 @@ export class SidebarComponent implements OnInit, OnDestroy {
       subitems: [
         {
           title: 'Extracurriculares Técnicas',
-          id: 'technical-extra',
+          id: 'extras-tecnicas',
         },
         {
           title:
             'Centro Acadêmico, Secretarias Acadêmicas, Coletivos e Grupos Religiosos',
-          id: 'academic-center',
+          id: 'centro-academico-etc',
         },
         {
           title: 'Iniciações Científicas',
-          id: 'scientific-initiation',
+          id: 'ics',
         },
         {
           title: 'Grupos Extracurriculares',
-          id: 'extra',
+          id: 'extras',
         },
       ],
     },
@@ -180,15 +180,15 @@ export class SidebarComponent implements OnInit, OnDestroy {
       subitems: [
         {
           title: 'Alojamento Estudantil no Campus',
-          id: 'college-home',
+          id: 'alojamento',
         },
         {
           title: 'Grupos no Facebook',
-          id: 'facebook-groups',
+          id: 'grupos-no-facebook',
         },
         {
           title: 'Imobiliárias de São Carlos',
-          id: 'real-estate',
+          id: 'imobiliarias',
         },
       ],
     },
