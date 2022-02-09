@@ -34,8 +34,10 @@ a:hover {
 }
 
 ul li:first-of-type.expanded {
-  @extend .mt-5;
-  transition: 0.25s;
+  @include media-breakpoint-up(lg) {
+    margin-top: 25%;
+    transition: 0.25s;
+  }
 }
 
 .expanded,

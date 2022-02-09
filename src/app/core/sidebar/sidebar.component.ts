@@ -60,6 +60,12 @@ export class SidebarComponent implements OnInit, OnDestroy {
         },
       ],
     },
+    {
+      title: 'Ouvidoria',
+      icon: 'fas fa-bullhorn',
+      route: 'ouvidoria',
+      collapsed: true,
+    },
     // {
     //   title: 'Kit Bixo',
     //   icon: 'fas fa-tshirt',
