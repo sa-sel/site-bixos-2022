@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { Route, RouterModule, Routes } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router'
 import {
   BandejaoComponent,
   BibliotecasComponent,
@@ -8,16 +8,16 @@ import {
   IcExtraComponent,
   MatriculaComponent,
   MoradiasComponent,
+  OuvidoriaComponent,
   PreparacaoEstudosComponent,
   ProjetoAmpereComponent,
   SemanaDeRecepcaoComponent,
   ServicosAcademicosComponent,
   SobreCursoComponent,
-  OuvidoriaComponent,
 } from '@core'
 import { RouteModel } from '@models'
 
-const routes: (RouteModel | Route)[] = [
+const routes: RouteModel[] = [
   {
     path: '',
     component: HomeComponent,
@@ -184,10 +184,18 @@ const routes: (RouteModel | Route)[] = [
     path: 'ouvidoria',
     component: OuvidoriaComponent,
     data: {
-      background: [{ src: '/assets/images/ouvidoria/', alt: 'Ouvidoria' }],
+      title: 'Ouvidoria',
+      background: [
+        { src: '/assets/images/ouvidoria/banner.jpg', alt: 'Reunião na sala da SA-SEL' },
+      ],
+      logo: {
+        src: '/assets/images/ouvidoria/logo.svg',
+        alt: 'Comissão Minerva',
+      },
+      bgDarkness: 0.4,
     },
   },
-  { path: '**', redirectTo: '/' },
+  { path: '**', redirectTo: '/' } as any,
 ]
 
 @NgModule({

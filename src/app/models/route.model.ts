@@ -1,4 +1,3 @@
-import { Component } from '@angular/core'
 import { ImageModel } from './image.model'
 
 export interface RouteDataModel {
@@ -10,6 +9,6 @@ export interface RouteDataModel {
 
 export interface RouteModel {
   path: string
-  component: Component
+  component: any
   data: RouteDataModel
 }
