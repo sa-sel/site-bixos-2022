@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core'
-
 import { ImageGridItemModel, ModalModel } from '@models'
 
 @Component({
@@ -8,6 +7,7 @@ import { ImageGridItemModel, ModalModel } from '@models'
 })
 export class ImageGridComponent {
   @Input() gridItems!: ImageGridItemModel[]
+  @Input() large = false
 
   openModal = false
   modal: ModalModel = {

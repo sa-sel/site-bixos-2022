@@ -9,6 +9,7 @@ export class SobreCursoComponent {
   textAndImageList: AlternatingLayoutModel[] = [
     {
       title: '"Separação" por Ênfases',
+      anchor: 'separacao-enfases',
       subtitle: true,
       image: {
         alt: 'Bloco D, prédio onde ocorrem diversas aulas da Elétrica',
@@ -19,6 +20,7 @@ export class SobreCursoComponent {
     },
     {
       title: 'Grade Curricular',
+      anchor: 'grade-curricular',
       subtitle: true,
       image: {
         alt: 'Bancada no laboratório de medidas e circuitos',
@@ -29,6 +31,7 @@ export class SobreCursoComponent {
     },
     {
       title: 'Proposta Do Curso, Projeto Pedagógico e Certificados Especiais',
+      anchor: 'certificados-especiais',
       subtitle: true,
       image: {
         alt: 'Uma aula de Física',

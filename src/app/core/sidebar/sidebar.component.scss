@@ -33,6 +33,11 @@ a:hover {
   color: inherit !important;
 }
 
+ul li:first-of-type.expanded {
+  @extend .mt-5;
+  transition: 0.25s;
+}
+
 .expanded,
 .expanded * {
   @extend .active-utils;

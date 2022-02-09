@@ -16,12 +16,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     if (this.isBelowBanner) {
-      /* eslint-disable no-undef */
       window.addEventListener('scroll', () => {
         // if a whole page was scrolled
         window.scrollY > window.innerHeight ? this.setSticky() : this.unsetSticky()
       })
-      /* eslint-enable no-undef */
     } else {
       this.setSticky()
     }
@@ -40,21 +38,25 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   private setSticky() {
-    const navbar = this.navbarRef?.nativeElement
+    const navbar = this.navbarRef?.nativeElement as Element
+    const { height } = navbar.getBoundingClientRect()
+
     navbar.classList.add('fixed-top')
 
-    // eslint-disable-next-line
     const main = document.querySelector('main') || document.querySelector('.main')
     if (main) {
-      main.style.paddingTop = `${navbar.offsetHeight + 16}px`
+      main.style.paddingTop = `${height + 16}px`
     }
+
+    document.querySelectorAll('a[id]').forEach(anchor => {
+      anchor.setAttribute('style', `scroll-margin-top: ${height}px`)
+    })
   }
 
   private unsetSticky() {
     const navbar = this.navbarRef?.nativeElement
     navbar.classList.remove('fixed-top')
 
-    // eslint-disable-next-line
     const main = document.querySelector('main') || document.querySelector('.main')
     if (main) {
       main.style.paddingTop = '16px'

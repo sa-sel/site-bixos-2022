@@ -1,7 +1,6 @@
-<app-title>Matrícula</app-title>
+<app-page-title></app-page-title>
 
 <section>
-  <a id="flowchart"></a>
   <p>
     No
     <a
@@ -14,15 +13,18 @@
     das mais importantes.
   </p>
 
-  <img
-    src="/assets/images/matricula/fluxograma.png"
-    alt="Fluxograma: Convoações, Matrícula e Lista de Espera"
-    class="d-block mx-auto my-2"
-  />
+  <a id="fluxograma"></a>
+  <app-figure
+    [image]="{
+      src: '/assets/images/matricula/fluxograma.png',
+      alt: 'Fluxograma: Convoações, Matrícula e Lista de Espera'
+    }"
+    [small]="true"
+  ></app-figure>
 </section>
 
 <section>
-  <a id="dates"></a>
+  <a id="datas"></a>
   <app-title [subtitle]="true"
     >Listas de Chamadas: Datas e Período da Divulgação e Matrícula (Primeira Etapa
     Virtual)</app-title
@@ -56,7 +58,6 @@
     </li>
   </ul>
 
-  <a id="enrollment" name="enrollment"></a>
   <p>
     <strong>Observação:</strong> Horário de atendimento da Central Unificada de Matrículas
     (página 47): das 08h00 às 18h00, de segunda a sexta-feira.
@@ -64,6 +65,7 @@
 </section>
 
 <section>
+  <a id="confirmacao-matricula"></a>
   <app-title [subtitle]="true"
     >Etapa Virtual de Confirmação da Matrícula (1ª a 3ª chamadas)
   </app-title>

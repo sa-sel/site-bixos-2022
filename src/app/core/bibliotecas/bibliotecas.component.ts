@@ -9,6 +9,7 @@ export class BibliotecasComponent {
   textAndImageList: AlternatingLayoutModel[] = [
     {
       title: 'Salas de Estudos',
+      anchor: 'salas-estudos',
       subtitle: true,
       image: {
         alt: 'interior do aquario',
@@ -19,6 +20,7 @@ export class BibliotecasComponent {
     },
     {
       title: 'Pró Aluno - EESC',
+      anchor: 'pro-aluno',
       subtitle: true,
       image: {
         alt: 'pro aluno eesc',
@@ -36,6 +38,7 @@ export class BibliotecasComponent {
         alt: 'biblioteca eesc',
         caption: 'Biblioteca EESC',
       },
+      fill: true,
     },
     {
       image: {
@@ -43,6 +46,7 @@ export class BibliotecasComponent {
         alt: 'biblioteca icmc',
         caption: 'Biblioteca ICMC',
       },
+      fill: true,
     },
     {
       image: {
@@ -50,6 +54,7 @@ export class BibliotecasComponent {
         alt: 'biblioteca ifsc',
         caption: 'Biblioteca IFSC',
       },
+      fill: true,
     },
   ]
 
@@ -61,6 +66,8 @@ export class BibliotecasComponent {
         caption:
           'Aplicativo <a target="_blank" rel="noopener noreferrer" href="http://www.sti.usp.br/appusp/">Bibliotecas USP</a>.',
       },
+      url: 'http://www.sti.usp.br/appusp/',
+      fill: true,
     },
     {
       image: {
@@ -69,6 +76,8 @@ export class BibliotecasComponent {
         caption:
           'Site  <a target="_blank" rel="noopener noreferrer" href="http://dedalus.usp.br/F/24J2UMLMSA1FE9XG6TJ7E1R7Q7QK7QCQXDJ31V5UYEXRH2SR1I-61364?RN=53343508&pds_handle=GUEST">Dedalus</a>, que permite buscas mais avançados.',
       },
+      url: 'http://dedalus.usp.br/F/24J2UMLMSA1FE9XG6TJ7E1R7Q7QK7QCQXDJ31V5UYEXRH2SR1I-61364?RN=53343508&pds_handle=GUEST',
+      fill: true,
     },
   ]
 }

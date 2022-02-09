@@ -1,4 +1,4 @@
-<app-title>Moradias</app-title>
+<app-page-title></app-page-title>
 
 <p>
   Agora você precisa encontrar um local para chamar de casa, não é mesmo? Pois bem,
@@ -9,6 +9,7 @@
 <app-alternating-layout [contents]="textAndImageList"></app-alternating-layout>
 
 <section align="justify">
+  <a id="alojamento"></a>
   <app-title [subtitle]="true">Alojamento Estudantil no Campus</app-title>
 
   <p>
@@ -29,10 +30,11 @@
     >.
   </p>
 
-  <app-image-grid [gridItems]="housingPhotos"></app-image-grid>
+  <app-image-grid [gridItems]="housingPhotos" [large]="true"></app-image-grid>
 </section>
 
 <section>
+  <a id="grupos-facebook"></a>
   <app-title [subtitle]="true">Grupos no Facebook</app-title>
 
   <p>
@@ -78,6 +80,7 @@
 
 <br />
 <section>
+  <a id="imobiliarias"></a>
   <app-title [subtitle]="true">Imobiliárias de São Carlos</app-title>
   <p>
     Existem diversas imobiliárias e casas ao redor do Campus. As imobiliárias você

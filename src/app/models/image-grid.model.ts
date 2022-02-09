@@ -5,4 +5,5 @@ export interface ImageGridItemModel {
   image: ImageModel
   modal?: ModalModel
   url?: string
+  fill?: boolean
 }

@@ -1,4 +1,4 @@
-<app-title>Bibliotecas</app-title>
+<app-page-title></app-page-title>
 
 <p>
   Como aluno(a) da USP, você tem direito de acessar livremente qualquer biblioteca
@@ -9,7 +9,7 @@
   >), assim, você não precisa se preocupar em comprar livros ou apostilas.
 </p>
 
-<app-image-grid [gridItems]="libraries"></app-image-grid>
+<app-image-grid [gridItems]="libraries" [large]="true"></app-image-grid>
 
 <p>
   Na sua primeira visita a uma biblioteca da USP, você poderá fazer seu cadastro, te
@@ -26,19 +26,19 @@
   novos exemplares. Ou seja, atrasou 2 dias e tem 3 livros → 6 dias suspenso.
 </p>
 
-<figure>
-  <img
-    class="img-fluid w-70 w-md-60 w-lg-50 d-block m-auto"
-    src="assets/images/bibliotecas/acervo.png"
-    alt="acervo de exemplares icmc"
-  />
-  <figcaption>Acervo de exemplares, biblioteca ICMC</figcaption>
-</figure>
+<app-figure
+  [image]="{
+    src: '/assets/images/bibliotecas/acervo.png',
+    alt: 'Acervo de exemplares, biblioteca ICMC',
+    caption: 'Acervo de exemplares, biblioteca ICMC'
+  }"
+  [small]="true"
+></app-figure>
 
 <p>
   Você pode pesquisar por livros no acervo, ver e renovar seus empréstimos, e solicitar
   reserva de um livro indisponível no momento por meio de 2 plataformas.
 </p>
-<app-image-grid [gridItems]="searchOptions"></app-image-grid>
+<app-image-grid [gridItems]="searchOptions" [large]="true"></app-image-grid>
 
 <app-alternating-layout [contents]="textAndImageList"></app-alternating-layout>

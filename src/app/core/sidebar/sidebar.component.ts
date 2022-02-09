@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
-import { NavigationEnd, Router } from '@angular/router'
+import { NavigationEnd, Router, Scroll } from '@angular/router'
 import { SidebarItemModel } from '@models'
 import { SidebarService } from '@services'
 import * as bootstrap from 'bootstrap'
@@ -17,9 +17,8 @@ export class SidebarComponent implements OnInit, OnDestroy {
   subscriptions: Subscription[] = []
   sidebar!: bootstrap.Offcanvas
 
-  // TODO: move this to .json file
-  // TODO: make scrolling to fragment stop a little higher (because of navbar)
-  // https://stackoverflow.com/questions/24665602/scrollintoview-scrolls-just-too-far
+  private changedRoutes = true
+
   items: SidebarItemModel[] = [
     {
       title: 'Página Inicial',
@@ -47,13 +46,23 @@ export class SidebarComponent implements OnInit, OnDestroy {
     },
     {
       title: 'Semana de Recepção',
-      icon: 'fas fa-calendar', // far fa-calendar, fas fa-calendar-week
-      route: 'semana-de-recepcao',
+      icon: 'fas fa-calendar-week',
+      route: 'semana-recepcao',
       collapsed: true,
+      subitems: [
+        {
+          title: 'Cronograma',
+          id: 'cronograma',
+        },
+        {
+          title: 'Apadrinhamento',
+          id: 'apadrinhamento',
+        },
+      ],
     },
     // {
     //   title: 'Kit Bixo',
-    //   icon: 'fas fa-tshirt', // fas fa-gifts, fas fa-gift
+    //   icon: 'fas fa-tshirt',
     //   route: 'kit-bixo',
     //   collapsed: true,
     // },
@@ -65,19 +74,15 @@ export class SidebarComponent implements OnInit, OnDestroy {
       subitems: [
         {
           title: 'Fluxograma',
-          id: 'flowchart',
+          id: 'fluxograma',
         },
         {
           title: 'Datas das chamadas',
-          id: 'dates',
+          id: 'datas',
         },
         {
-          title: 'Matrícula',
-          id: 'enrollment',
-        },
-        {
-          title: 'Local de matrícula',
-          id: 'places',
+          title: 'Confirmação de matrícula',
+          id: 'confirmacao-matricula',
         },
       ],
     },
@@ -86,23 +91,126 @@ export class SidebarComponent implements OnInit, OnDestroy {
       icon: 'fas fa-graduation-cap',
       route: 'curso',
       collapsed: true,
+      subitems: [
+        {
+          title: 'Separação por Ênfases',
+          id: 'separacao-enfases',
+        },
+        {
+          title: 'Grade Curricular',
+          id: 'grade-curricular',
+        },
+        {
+          title: 'Certificados Especiais',
+          id: 'certificados-especiais',
+        },
+      ],
     },
     {
-      title: 'Projeto Ampére',
-      icon: 'fab fa-youtube', // fab fa-youtube-square, fas fa-pen, fas fa-book
+      title: 'Projeto Ampere',
+      icon: 'fab fa-youtube',
       route: 'projeto-ampere',
       collapsed: true,
+      subitems: [
+        {
+          title: 'Pré-Cálculo',
+          id: 'pre-calculo',
+        },
+        {
+          title: 'Geometria Analítica',
+          id: 'geometria-analitica',
+        },
+        {
+          title: 'Programação',
+          id: 'programacao',
+        },
+        {
+          title: 'Física I',
+          id: 'fisica1',
+        },
+        {
+          title: 'Cálculo I',
+          id: 'calculo1',
+        },
+      ],
+    },
+    {
+      title: 'Preparação Estudos',
+      icon: 'fas fa-book',
+      route: 'preparacao-estudos',
+      collapsed: true,
+      subitems: [
+        {
+          title: 'Introdução',
+          id: 'introducao',
+        },
+        {
+          title: 'Sites e Softwares',
+          id: 'ferramentas',
+        },
+      ],
     },
     {
       title: 'Serviços Acadêmicos',
       icon: 'fas fa-user-graduate',
       route: 'servicos-academicos',
       collapsed: true,
+      subitems: [
+        {
+          title: 'Portal de Serviços USP',
+          id: 'portal-servicos',
+        },
+        {
+          title: 'e-Disciplinas (Moodle)',
+          id: 'moodle',
+        },
+        {
+          title: 'Ferramentas Google',
+          id: 'ferramentas-google',
+        },
+        {
+          title: 'Eduroam (Wi-Fi)',
+          id: 'eduroam',
+        },
+        {
+          title: 'MatrUSP',
+          id: 'matrusp',
+        },
+        {
+          title: 'Outros mimos',
+          id: 'mimos',
+        },
+      ],
     },
     {
       title: 'ICs e Extracurriculares',
-      icon: 'fas fa-microscope', // fas fa-atom
+      icon: 'fas fa-microscope',
       route: 'ics-extras',
+      collapsed: true,
+      subitems: [
+        {
+          title: 'Extracurriculares Técnicas',
+          id: 'extracurriculares-tecnicas',
+        },
+        {
+          title:
+            'Centro Acadêmico, Secretarias Acadêmicas, Coletivos e Grupos Religiosos',
+          id: 'centro-academico',
+        },
+        {
+          title: 'Iniciações Científicas',
+          id: 'iniciacao-cientifica',
+        },
+        {
+          title: 'Grupos Extracurriculares',
+          id: 'extracurriculares',
+        },
+      ],
+    },
+    {
+      title: 'Conheça o Campus',
+      icon: 'fas fa-map-marked',
+      route: 'campus',
       collapsed: true,
     },
     {
@@ -116,12 +224,36 @@ export class SidebarComponent implements OnInit, OnDestroy {
       icon: 'fas fa-book-reader',
       route: 'bibliotecas',
       collapsed: true,
+      subitems: [
+        {
+          title: 'Salas de Estudos',
+          id: 'salas-estudos',
+        },
+        {
+          title: 'Pró Aluno - EESC',
+          id: 'pro-aluno',
+        },
+      ],
     },
     {
       title: 'Moradias',
       icon: 'fas fa-house-user',
       route: 'moradias',
       collapsed: true,
+      subitems: [
+        {
+          title: 'Alojamento Estudantil no Campus',
+          id: 'alojamento',
+        },
+        {
+          title: 'Grupos no Facebook',
+          id: 'grupos-facebook',
+        },
+        {
+          title: 'Imobiliárias de São Carlos',
+          id: 'imobiliarias',
+        },
+      ],
     },
   ]
 
@@ -130,7 +262,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
   constructor(private router: Router, private sidebarService: SidebarService) {}
 
   ngOnInit(): void {
-    // eslint-disable-next-line
     const sidebarElement = document.querySelector('#sidebar')
 
     if (sidebarElement) {
@@ -151,15 +282,31 @@ export class SidebarComponent implements OnInit, OnDestroy {
     this.subscriptions.push(
       this.router.events.subscribe(e => {
         if (e instanceof NavigationEnd) {
-          const regexp = /\/(?<route>\w*)(?<fragment>#.+)?/
+          const regexp = /\/(?<route>[^#]*)(?<fragment>#.+)?/
           const groups = regexp.exec(e.urlAfterRedirects)?.groups ?? {}
 
           /* eslint-disable dot-notation */
+          this.changedRoutes = this.route !== groups['route']
           this.route = groups['route']
-          this.fragment = groups['fragment']?.replace('#', '')
+          this.fragment = groups['fragment']?.replace('#', '') ?? ''
           /* eslint-enable dot-notation */
 
           this.sidebar.hide()
+        }
+      })
+    )
+
+    this.subscriptions.push(
+      this.router.events.subscribe(e => {
+        if (e instanceof Scroll) {
+          if (e.anchor) {
+            setTimeout(
+              () => {
+                document.querySelector(`#${e.anchor}`)?.scrollIntoView()
+              },
+              this.changedRoutes ? 350 : 0
+            )
+          }
         }
       })
     )

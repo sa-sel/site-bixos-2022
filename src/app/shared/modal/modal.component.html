@@ -1,6 +1,16 @@
 <ng-template #modal>
   <div class="modal-header">
-    <h4 class="modal-title pull-left">{{ title }}</h4>
+    <!-- link only -->
+    <div *ngIf="url && !image; else titleBlock" class="m-0 p-0">
+      <a [href]="url" target="_blank" rel="noreferrer noopener" class="m-0 p-0">
+        <h4 class="modal-title pull-left">{{ title }}</h4>
+      </a>
+    </div>
+
+    <ng-template #titleBlock
+      ><h4 class="modal-title pull-left">{{ title }}</h4></ng-template
+    >
+
     <button
       type="button"
       class="btn-close close pull-right"
@@ -12,27 +22,16 @@
   </div>
 
   <div class="modal-body">
-    <!-- image + link -->
-    <figure class="mt-2 mb-4" *ngIf="url && image">
-      <a [href]="url" target="_blank" rel="noreferrer noopener">
-        <img [src]="image?.src" [alt]="image?.alt" />
-      </a>
-      <figcaption>{{ image?.caption }}</figcaption>
-    </figure>
+    <!-- image -->
+    <app-figure
+      *ngIf="image"
+      [image]="image"
+      [url]="url"
+      [extraSmall]="true"
+      [marginTop]="false"
+    ></app-figure>
 
-    <!-- link only -->
-    <div class="mt-2 mb-3" *ngIf="url && !image">
-      <a [href]="url" target="_blank" rel="noreferrer noopener" class="text-muted">
-        [link]
-      </a>
-    </div>
-
-    <!-- image only -->
-    <figure class="mt-2 mb-4" *ngIf="!url && image">
-      <img [src]="image?.src" [alt]="image?.alt" />
-      <figcaption>{{ image?.caption }}</figcaption>
-    </figure>
-
+    <!-- text -->
     <div class="px-1 pb-2">
       <div *ngIf="paragraphs" class="text-justify">
         <p *ngFor="let paragraph of paragraphs">

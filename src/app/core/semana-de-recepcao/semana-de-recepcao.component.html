@@ -1,4 +1,4 @@
-<app-title>Semana de Recepção</app-title>
+<app-page-title></app-page-title>
 
 <section>
   <p>
@@ -13,14 +13,19 @@
     >.
   </p>
 
-  <img
-    src="../../../assets/images/semana-de-recepcao/cronograma.png"
-    alt="Cronograma da semana de recepção de 2021"
-    class="d-block mx-auto my-3 w-100 w-lg-65"
-  />
+  <a id="cronograma"></a>
+
+  <app-figure
+    [image]="{
+      src: '/assets/images/semana-de-recepcao/cronograma.png',
+      alt: 'Cronograma da Semana de Recepção de 2022',
+      caption: 'Cronograma da Semana de Recepção de 2022'
+    }"
+  ></app-figure>
 </section>
 
 <section>
+  <a id="apadrinhamento"></a>
   <app-title [subtitle]="true">Apadrinhamento</app-title>
   <p>
     Todos os bixos são designados a um padrinho, que é notificado sobre seu respectivo
