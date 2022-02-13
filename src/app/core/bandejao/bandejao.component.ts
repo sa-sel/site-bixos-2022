@@ -21,7 +21,7 @@ export class BandejaoComponent {
         src: '/assets/images/bandejao/mesas.jpg',
         caption: 'Mesas de refeição do bandeco',
       },
-      text: 'A salada, o arroz, o feijão e o pão podem ser pegos à vontade, porém as guarnições são controladas pelos funcionários, responsáveis por servi-las.<br><br>Para entrar no bandejão é preciso ter créditos na sua carteirinha. O local para recarregar os créditos fica do lado do restaurante, e é aberto no horário do almoço. Então não se esqueça de verificar previamente se você tem créditos, pra não ficar sem janta!',
+      text: 'A salada, o arroz, o feijão e o pão podem ser pegos à vontade, porém as guarnições são controladas pelos funcionários, responsáveis por servi-las.<br><br>Para entrar no bandejão é preciso ter créditos na sua carteirinha. O local para recarregar os créditos fica do lado do restaurante e é aberto no horário do almoço. Então não se esqueça de verificar previamente se você tem créditos para não ficar sem janta!',
     },
     {
       text: 'Você também pode gerar um boleto para fazer a recarga pelo <strong><a target="_blank" rel="noopener noreferrer" href="https://portalservicos.usp.br">Portal de Serviços</a></strong>: restaurante universitário → boleto → comprar. Ou pelo aplicativo <strong>Cardápio USP:</strong> ícone de dinheiro no topo superior direito → fazer login → gerar boleto. <br><br>Vale notar que uma vez pago, o valor do boleto pode demorar de 1 a 3 dias para cair na sua conta.',
@@ -39,7 +39,7 @@ export class BandejaoComponent {
         src: '/assets/images/bandejao/marmita.jpg',
         caption: 'Marmitas servidas durante a pandemia',
       },
-      text: 'Você pode consultar o cardápio do dia pelo <a target="_blank" rel="noopener noreferrer" href="http://www.puspsc.usp.br/cardapio/">site da prefeitura do campus</a>, pelo aplicativo <a target="_blank" rel="noopener noreferrer" href="https://sites.usp.br/sas/exemplo-de-post-2/">Cardápio USP</a>, ou até mesmo por um <a href="https://t.me/BandejaoBot" target="_blank" rel="noreferrer noopener">bot no telegram</a>.<br><br>Durante o período de pandemia o bandejão estava sendo oferecido por meio de marmitas. Medidas de segurança como oferecimento de álcool em gel e distanciamento estão sendo seguidas.<br><br>Estudantes com dificuldades socioeconômicas podem acessar o auxílio alimentação oferecido pela <a target="_blank" rel="noopener noreferrer" href="http://www.puspsc.usp.br/bolsas-e-auxilios/">prefeitura do campus</a>.',
+      text: 'Você pode consultar o cardápio do dia pelo <a target="_blank" rel="noopener noreferrer" href="http://www.puspsc.usp.br/cardapio/">site da prefeitura do campus</a>, pelo aplicativo <a target="_blank" rel="noopener noreferrer" href="https://sites.usp.br/sas/exemplo-de-post-2/">Cardápio USP</a>, ou até mesmo por um <a href="https://t.me/BandejaoBot" target="_blank" rel="noreferrer noopener">bot no telegram</a>.<br><br>Durante o período de pandemia, o bandejão estava sendo oferecido por meio de marmitas, seguindo as medidas de segurança, como oferecimento de álcool em gel e distanciamento. No dia 07/02/2022, houve a reabertura do bandejão presencial (comer lá no restaurante), porém ainda não sabemos se alguma medida será tomada quando as aulas se iniciarem.<br><br>Estudantes com dificuldades socioeconômicas podem acessar o auxílio alimentação oferecido pela <a target="_blank" rel="noopener noreferrer" href="http://www.puspsc.usp.br/bolsas-e-auxilios/">prefeitura do campus</a>.',
     },
   ]
 }

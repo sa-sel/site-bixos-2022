@@ -15,7 +15,7 @@ export class MoradiasComponent {
         src: '/assets/images/moradias/entradas.jpg',
         caption: 'Mapa identificando as principais saídas do Campus I',
       },
-      text: 'No campus I, tem 4 entradas principais, apelidadas de acordo com os prédios que estão próximos. São elas: a <b>física</b>, <b>matemática</b>, <b>produção</b>, e <b>arquitetura</b>.<br><br> Elas são frequentemente utilizadas como referência para procurar apartamentos, e repúblicas. Por exemplo, um anúncio pode dizer: <i>"nossa rep está a 700m da saída da ARQ"</i>.<br><br> Tem apartamentos e reps pertos de todas as quatro saídas; a questão é pesquisar e encontrar aquela que é mais conveniente no seu caso!',
+      text: 'No campus I, tem 4 entradas principais, apelidadas de acordo com os prédios que estão próximos. São elas: <b>física</b>, <b>matemática</b>, <b>produção</b>, e <b>arquitetura</b>.<br><br> Elas são frequentemente utilizadas como referência para procurar apartamentos, e repúblicas. Por exemplo, um anúncio pode dizer: <i>"nossa rep está a 700m da saída da ARQ"</i>.<br><br> Tem apartamentos e reps perto de todas as quatro saídas; a questão é pesquisar e encontrar aquela que é mais conveniente no seu caso!',
     },
   ]
 

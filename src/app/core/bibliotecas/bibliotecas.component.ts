@@ -16,7 +16,7 @@ export class BibliotecasComponent {
         src: 'assets/images/bibliotecas/aquario.jpg',
         caption: 'Interior do Aquário',
       },
-      text: 'As bibliotecas da EESC, ICMC, e IFSC possuem salas de estudo 24h. A da EESC fica logo ao lado da biblioteca e é chamada de "aquário".<br><br>Durante o horário de funcionamento das bibliotecas, há também áreas de estudo adicionais. Na biblioteca do ICMC e IFSC, há salas fechadas que podem ser utilizadas por grupos de estudantes.',
+      text: 'As bibliotecas da EESC,  do ICMC, e do IFSC possuem salas de estudo 24h. A sala da EESC fica logo ao lado de sua biblioteca e é chamada de "aquário".<br><br>Durante o horário de funcionamento das bibliotecas, há também áreas de estudo adicionais. Na biblioteca do ICMC e do IFSC, há salas fechadas que podem ser utilizadas por grupos de estudantes.',
     },
     {
       title: 'Pró Aluno - EESC',
@@ -27,7 +27,7 @@ export class BibliotecasComponent {
         src: 'assets/images/bibliotecas/proaluno.jpg',
         caption: 'Entrada do Pró Aluno - EESC',
       },
-      text: 'Pertinho da biblioteca da EESC e do aquário, está o espaço Pró-Aluno. Lá há 2 salas informatizadas para uso de computadores. Para acessa-los basta fazer login com sua conta USP.<br><br>Cada computador está conectado à impressora do espaço. Todo semestre, cada aluno pode realizar <strong>gratuitamente</strong> a impressão de <strong>100 páginas</strong>.<br><br>No bloco 6 do ICMC, também há salas informatizadas no último andar que podem ser acessadas por alunos.',
+      text: 'Pertinho da biblioteca da EESC e do aquário, está o espaço Pró-Aluno. Lá, há 2 salas informatizadas para uso de computadores. Para acessá-los basta fazer login com sua conta USP.<br><br>Cada computador está conectado à impressora do espaço. Todo semestre, cada aluno pode realizar <strong>gratuitamente</strong> a impressão de <strong>100 páginas</strong>.<br><br>No bloco 6 do ICMC, também há salas informatizadas no último andar que podem ser acessadas por alunos.',
     },
   ]
 
@@ -74,7 +74,7 @@ export class BibliotecasComponent {
         alt: 'site dedalus usp',
         src: 'assets/images/bibliotecas/dedalus.jpg',
         caption:
-          'Site  <a target="_blank" rel="noopener noreferrer" href="http://dedalus.usp.br/F/24J2UMLMSA1FE9XG6TJ7E1R7Q7QK7QCQXDJ31V5UYEXRH2SR1I-61364?RN=53343508&pds_handle=GUEST">Dedalus</a>, que permite buscas mais avançados.',
+          'Site  <a target="_blank" rel="noopener noreferrer" href="http://dedalus.usp.br/F/24J2UMLMSA1FE9XG6TJ7E1R7Q7QK7QCQXDJ31V5UYEXRH2SR1I-61364?RN=53343508&pds_handle=GUEST">Dedalus</a>, que permite buscas mais avançadas.',
       },
       url: 'http://dedalus.usp.br/F/24J2UMLMSA1FE9XG6TJ7E1R7Q7QK7QCQXDJ31V5UYEXRH2SR1I-61364?RN=53343508&pds_handle=GUEST',
       fill: true,
