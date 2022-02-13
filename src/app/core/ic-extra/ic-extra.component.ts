@@ -8,7 +8,7 @@ import { ExtracurricularGroupModel, ExtracurricularGroupTypes } from '@models'
 export class IcExtraComponent {
   extracurricularGroups: ExtracurricularGroupModel[] = [
     {
-      name: 'Abuscar',
+      name: 'ABUSCar',
       categories: [ExtracurricularGroupTypes.Representative],
       url: 'https://www.facebook.com/abusanca/',
     },
@@ -26,11 +26,6 @@ export class IcExtraComponent {
       name: 'Atlética CAASO',
       categories: [ExtracurricularGroupTypes.Sports],
       url: 'http://atleticacaaso.com/',
-    },
-    {
-      name: 'Abuscar',
-      categories: [ExtracurricularGroupTypes.Representative],
-      url: 'https://www.facebook.com/abusanca/',
     },
     {
       name: 'Baja EESC - USP',
